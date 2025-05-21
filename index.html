@@ -7,21 +7,18 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-  <style>
-    .hidden { display: none; }
-  </style>
+  <style>.hidden { display: none; }</style>
 </head>
 <body>
 
-  <!-- Navigácia -->
-  <header>
-    <div class="logo">BEST<span class="red">5</span></div>
-    <nav>
-      <a href="#reference">reference</a>
-      <a href="#kontakty">kontakty</a>
-      <a href="#onas">o nás</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">BEST<span class="red">5</span></div>
+  <nav>
+    <a href="#reference">reference</a>
+    <a href="#kontakty">kontakty</a>
+    <a href="#onas">o nás</a>
+  </nav>
+</header>
 
   <!-- Obsah -->
   <main>
@@ -117,26 +114,47 @@
         <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
       </div>
     </section>
+    
     <section id="kontakty" class="section hidden">
-      <h2>Kontakty</h2>
-      <ul>
-        <li><strong>Jaroslav Novák</strong> – ředitel<br>+420 725 102 447</li>
-        <li><strong>Jaroslava Nováková</strong> – jednatel<br>+420 721 619 671</li>
-        <li><strong>Jaroslava Nováková</strong> – tepování<br>+420 724 232 423</li>
-        <li><strong>E-mail:</strong> <a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a></li>
-      </ul>
-      <p><strong>Sídlo:</strong><br>Nové sady 988/2<br>602 00 Brno</p>
-      <p><strong>Adresa provozovny:</strong><br>Ždírec 156<br>588 13 Polná</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.812135799191!2d15.6611269!3d49.5107254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bfe56bdaf5f29%3A0xd84b7c20a7e64863!2zxb5kw6lzcmVjIDE1NiwgNTg4IDEzIFbFvWpsZW4sIMWZZXRpY2Vrbw!5e0!3m2!1sen!2scz!4v1680000000000!5m2!1sen!2scz" allowfullscreen loading="lazy"></iframe>
-      <div class="qr-codes">
-        <img src="icons/qr1.png" alt="QR Instagram">
-        <img src="icons/qr2.png" alt="QR WhatsApp">
-        <img src="icons/qr3.png" alt="QR Facebook">
+      <h2>kontakty</h2>
+      <div class="kontakt-flex">
+        <!-- Ľavý box -->
+        <div class="kontakt-card">
+          <ul>
+            <li><strong>Jaroslav Novák</strong><br><span>ředitel</span><br>+420 725 102 447</li>
+            <li><strong>Jaroslava Nováková</strong><br><span>jednatel</span><br>+420 721 619 671</li>
+            <li><strong>Jaroslava Nováková</strong><br><span>tepování</span><br>+420 724 232 423</li>
+            <li><strong>E-mail:</strong><br><a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a></li>
+          </ul>
+          <div class="qr-codes">
+            <img src="qr/qr-code_instagram.png" alt="QR Instagram">
+            <img src="qr/qr-code-tiktok.png" alt="QR TikTok">
+            <img src="qr/qr-code-facebook.png" alt="QR Facebook">
+          </div>
+        </div>
+    
+        <!-- Pravý box -->
+        <div class="kontakt-right">
+          <p><strong>Adresa provozovny:</strong><br>Ždírec 156<br>588 13 Polná</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.1087110182085!2d15.661284115954402!3d49.510638779355534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x470bfe56bdaf5f29%3A0xd84b7c20a7e64863!2zxb5kw6lzcmVjIDE1NiwgNTg4IDEzIFbFvWpsZW4sIMWZZXRpY2Vrbw!5e0!3m2!1scs!2scz!4v1680000000000!5m2!1scs!2scz"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </div>
-      <div class="back-button" style="margin-top: 30px;">
-        <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+    
+      <div class="back-button">
+        <button onclick="showDefault()">Zpět na hlavní stránku</button>
       </div>
     </section>
+    
+    
+
+
     <section id="onas" class="section hidden">
       <h2>O nás</h2>
       <p>Firma byla založena v roce 1992 podnikáním fyzické osoby. Společnost Bestfive s.r.o. jako pokračující firma byla založena v roce 2011.</p>
@@ -151,29 +169,22 @@
   </main>
 
   <script>
-  const defaultDiv = document.getElementById('default-sections');
-  const special = ['reference','kontakty','onas'];
-  // Klik na navigaciu
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const id = link.getAttribute('href').substring(1);
-      // skry default obsahu
-      defaultDiv.classList.add('hidden');
-      // skry special sekcie
-      special.forEach(i=> document.getElementById(i).classList.add('hidden'));
-      // zobraz vybranu
-      document.getElementById(id).classList.remove('hidden');
+    const defaultDiv = document.getElementById('default-sections');
+    const special = ['reference','kontakty','onas'];
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+        defaultDiv.classList.add('hidden');
+        special.forEach(i => document.getElementById(i)?.classList.add('hidden'));
+        document.getElementById(id)?.classList.remove('hidden');
+      });
     });
-  });
-  // tlacidlo spat
-  function showDefault() {
-    // skry special sekcie
-    special.forEach(i=> document.getElementById(i).classList.add('hidden'));
-    // vrat default obsahu
-    defaultDiv.classList.remove('hidden');
-  }
-</script>
-
-</body>
-</html>
+    function showDefault() {
+      special.forEach(i => document.getElementById(i)?.classList.add('hidden'));
+      defaultDiv.classList.remove('hidden');
+    }
+  </script>
+  
+  </body>
+  </html>
