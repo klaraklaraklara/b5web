@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>BEST5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigácia -->
+  <header>
+    <div class="logo">BEST<span class="red">5</span></div>
+    <nav>
+      <a href="#reference">reference</a>
+      <a href="#kontakty">kontakty</a>
+      <a href="#onas">o nás</a>
+    </nav>
+  </header>
+
+  <!-- Obsah -->
+  <main>
+    <!-- Predvolený obsah: úvod a služby -->
+    <div id="default-sections">
+      <!-- Úvodná sekcia -->
+      <section id="uvod" class="section">
+        <div class="uvod-wrapper">
+          <div class="sluzby">
+            <ul>
+              <li><img src="icons/pipe.svg" alt="Instalatér" width="20"> <a href="#instalateri">instalatérské služby</a></li>
+              <li><img src="icons/heating.svg" alt="Topenář" width="20"> <a href="#topenari">topenářské služby</a></li>
+              <li><img src="icons/moving.svg" alt="Stěhování" width="20"> <a href="#stehovani">stěhování těžkých předmětů</a></li>
+              <li><img src="icons/tow-truck.svg" alt="Odtah" width="20"> <a href="#odtahy">odtahové služby</a></li>
+              <li><img src="icons/cleaning.svg" alt="Tepování" width="20"> <a href="#tepovani">tepování</a></li>
+              <li><img src="icons/ozone.svg" alt="Dezinfekce" width="20"> <a href="#dezinfekce">dezinfekce ozonem</a></li>
+            </ul>
+          </div>
+          <div class="uvod-info">
+            <div class="kontakt-box">📞 +420 725 102 447</div>
+            <div class="uvod-text">
+              <p>Nabízíme komplexní technické<br>a úklidové služby pro domácnosti i firmy<br>s důrazem na kvalitu a spolehlivost.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sekcie služieb -->
+      <section id="instalateri" class="section">
+        <h2>Instalatérské služby</h2>
+        <ul>
+          <li>Montáže a opravy, vodoinstalace odpadů</li>
+          <li>Montáže a dodávky zařizovacích předmětů</li>
+          <li>Montáže ohřívačů vody</li>
+          <li>Dezinfekce potrubí dle ČSN</li>
+          <li>Strojní čištění odpadů</li>
+          <li>Kamerové prohlídky</li>
+          <li>Požární rozvody a hydranty</li>
+          <li>Praxe a zkušenosti více než 30 let</li>
+        </ul>
+      </section>
+      <section id="topenari" class="section">
+        <h2>Topenářské služby</h2>
+        <ul>
+          <li>Montáže ústředního topení v materiálech CU, plast a uhlíková ocel</li>
+          <li>Montáže radiátorů a topných žebříků, termostatických ventilů a hlavic</li>
+          <li>Dodávka a montáž kotlů, ohřívačů a tepelných čerpadel</li>
+          <li>Plnění a vypouštění otopných soustav – Rems</li>
+          <li>Čištění a ošetření otopných systémů robotem</li>
+          <li>Rems – úspora nákladů vytápění až 15 %</li>
+        </ul>
+      </section>
+      <section id="stehovani" class="section">
+        <h2>Stěhování těžkých předmětů</h2>
+        <ul>
+          <li>Stěhování předmětu o hmotnosti až do 0,5t po schodech</li>
+          <li>Např.: teplovodní kotle, ohřívače vody, lednice, skříně, trezory apod.</li>
+          <li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
+        </ul>
+      </section>
+      <section id="odtahy" class="section">
+        <h2>Odtahové služby</h2>
+        <p>(Sekcia zatiaľ neobsahuje detaily – môžeš doplniť)</p>
+      </section>
+      <section id="tepovani" class="section">
+        <h2>Tepování</h2>
+        <ul>
+          <li>Odstranění hloubkových nečistot</li>
+          <li>Použití nejefektivnější techniky na trhu</li>
+          <li>Horkovodní extrakční technologie pro maximální účinnost čištění</li>
+          <li>Obnovíme svěžest a barvy</li>
+          <li>Vysušení vyčištěného povrchu</li>
+          <li>Výkonný sací motor – minimum vlhkosti</li>
+        </ul>
+      </section>
+      <section id="dezinfekce" class="section">
+        <h2>Dezinfekce ozonem</h2>
+        <ul>
+          <li>Nejúčinnější metoda dezinfekce</li>
+          <li>Rychlý proces</li>
+          <li>Eliminace pachu z kouře, plísní, potu či zvířat</li>
+          <li>Ideální pro alergiky a astmatiky</li>
+          <li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
+          <li>Odstraňuje i skryté plísně a nečistoty</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Skryté sekcie -->
+    <section id="reference" class="section hidden">
+      <h2>Reference</h2>
+      <p>(Sekcia na doplnenie)</p>
+      <div class="back-button" style="margin-top: 30px;">
+        <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+      </div>
+    </section>
+    <section id="kontakty" class="section hidden">
+      <h2>Kontakty</h2>
+      <ul>
+        <li><strong>Jaroslav Novák</strong> – ředitel<br>+420 725 102 447</li>
+        <li><strong>Jaroslava Nováková</strong> – jednatel<br>+420 721 619 671</li>
+        <li><strong>Jaroslava Nováková</strong> – tepování<br>+420 724 232 423</li>
+        <li><strong>E-mail:</strong> <a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a></li>
+      </ul>
+      <p><strong>Sídlo:</strong><br>Nové sady 988/2<br>602 00 Brno</p>
+      <p><strong>Adresa provozovny:</strong><br>Ždírec 156<br>588 13 Polná</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.812135799191!2d15.6611269!3d49.5107254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bfe56bdaf5f29%3A0xd84b7c20a7e64863!2zxb5kw6lzcmVjIDE1NiwgNTg4IDEzIFbFvWpsZW4sIMWZZXRpY2Vrbw!5e0!3m2!1sen!2scz!4v1680000000000!5m2!1sen!2scz" allowfullscreen loading="lazy"></iframe>
+      <div class="qr-codes">
+        <img src="icons/qr1.png" alt="QR Instagram">
+        <img src="icons/qr2.png" alt="QR WhatsApp">
+        <img src="icons/qr3.png" alt="QR Facebook">
+      </div>
+      <div class="back-button" style="margin-top: 30px;">
+        <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+      </div>
+    </section>
+    <section id="onas" class="section hidden">
+      <h2>O nás</h2>
+      <p>Firma byla založena v roce 1992 podnikáním fyzické osoby. Společnost Bestfive s.r.o. jako pokračující firma byla založena v roce 2011.</p>
+      <p>Zpočátku se firma zabývala především instalatérskými a drobnými stavebními pracemi. Později se vyprofilovala na stavebnictví, zemní a výkopové práce a autodopravu, tyto služby poskytuje dodnes.</p>
+      <p>Zkušení zaměstnanci firmy dokáží realizovat jak menší stavební úpravy, opravy a rekonstrukce, tak domy na klíč, bourací práce, terénní úpravy, výkopové práce atd. Firma se také podílela na několika opravách historických objektů, např. Státního zámku Stekník, Státního hradu a zámku Bečov nad Teplou, Státního zámku Velké Březno a Státního zámku Kynžvart.</p>
+      <p>Pokud se týká služeb v autodopravení, firma vlastní několik nákladních vozů, velký odtahový speciál a autojeřáb. Je tedy možno realizovať odvozy materiálů, převзы kontejnerů, větších strojů, atd.</p>
+      <div class="back-button" style="margin-top: 30px;">
+        <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+  const defaultDiv = document.getElementById('default-sections');
+  const special = ['reference','kontakty','onas'];
+  // Klik na navigaciu
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('href').substring(1);
+      // skry default obsahu
+      defaultDiv.classList.add('hidden');
+      // skry special sekcie
+      special.forEach(i=> document.getElementById(i).classList.add('hidden'));
+      // zobraz vybranu
+      document.getElementById(id).classList.remove('hidden');
+    });
+  });
+  // tlacidlo spat
+  function showDefault() {
+    // skry special sekcie
+    special.forEach(i=> document.getElementById(i).classList.add('hidden'));
+    // vrat default obsahu
+    defaultDiv.classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
