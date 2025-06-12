@@ -24,22 +24,33 @@ function showSection(sectionId) {
 }
 
 function showDefault() {
-  // skryť všetky sekcie
-  document.querySelectorAll("#page-sections section").forEach(section => {
+  // Hide other sections
+  document.querySelectorAll("#page-sections .section").forEach(section => {
     section.classList.add("hidden");
   });
 
-  // zobraziť hlavný obsah
-  document.getElementById("default-sections").style.display = "block";
+  // Show hero again
+  const hero = document.getElementById("hero");
+  if (hero) {
+    hero.style.display = "block";
+  }
 
-  // označiť ako "default", aby fungoval pôvodný scroll listener
-  currentSection = "default";
+  // Show default sections
+  const defaultSections = document.getElementById("default-sections");
+  if (defaultSections) {
+    defaultSections.style.display = "block";
+  }
 
-  // skryť hlavičku ručne (rovnako ako po načítaní)
-  document.querySelector("header").style.top = "-100px";
-
-  // VYMAZAŤ SMOOTH SCROLL a nahradiť:
+  // Reset scroll position
   setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 10);  // Počkame kúsok aby DOM mohol prepnúť sekcie
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, 10);
+
+  // Hide the header
+  const header = document.querySelector("header");
+  if (header) {
+    header.style.top = "-100px";
+  }
+
+  currentSection = "default";
 }
