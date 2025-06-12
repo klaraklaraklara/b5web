@@ -545,3 +545,55 @@ main {
 #page-sections .section {
   margin-top: 80px;
 }
+
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-menu-container.left {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .hero-top-nav {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-logo {
+    max-width: 180px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .slider-track img {
+    height: 180px;
+  }
+
+  .sluzby-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .kontakt-flex {
+    flex-direction: column;
+  }
+
+  .kontakt-box {
+    margin-top: 10px;
+  }
+}
