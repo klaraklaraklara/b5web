@@ -10,18 +10,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 20px;
+  padding: 10px 30px;
   background-color: #b5a391; 
   border-bottom: 1px solid #2b2a29;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   gap: 10px;
 }
 
-.logo {
-  font-size: 32px;
-  font-weight: 700;
+.logo img {
+  max-height: 65px;
+  height: auto;
 }
 
 .red {
@@ -45,7 +45,7 @@ nav a:hover {
 
 h2 {
   font-size: 24px;
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -206,14 +206,12 @@ a:hover {
 }
 
 
-
-/* KONTAKT SEKCIA */
 .kontakt-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: space-between;
-  align-items: stretch; /*flex-start;*/
+  align-items: stretch; 
 }
 
 .kontakt-card {
@@ -305,7 +303,6 @@ a:hover {
   border: 0;
 }
 
-/* TlaÄidlo spĂ¤ĹĽ */
 .back-button {
   margin-top: 40px;
   text-align: center;
@@ -330,8 +327,6 @@ a:hover {
   color: #000;
   margin-left: 20px;
 }
-
-
 
 .hero-section {
   height: 100vh;
@@ -416,7 +411,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sticky hidden header */
 header {
   transition: top 0.3s ease-in-out;
   top: -100px;
@@ -473,8 +467,6 @@ footer.footer-bar {
   width: 100%;
 }
 
-
-/* ZabezpeÄenie, aby hlaviÄka nepreteka doprava */
 header {
   flex-wrap: wrap;
   max-width: 100%;
@@ -546,4 +538,8 @@ footer.footer-bar {
 
 main {
   flex-grow: 1;
+}
+
+#page-sections .section {
+  margin-top: 80px;
 }
