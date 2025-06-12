@@ -12,7 +12,7 @@ header {
   align-items: center;
   padding: 4px 20px;
   background-color: #b5a391; 
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #2b2a29;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -480,4 +480,70 @@ header {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer.footer-bar {
+  flex-shrink: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-sections {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer.footer-bar {
+  margin-top: auto;
+  background-color: #111;
+  color: white;
+  font-size: 13px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+
+.content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }

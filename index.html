@@ -10,13 +10,15 @@
   <style>.hidden { display: none; }</style>
 </head>
 <body>
+  <div class="content-wrapper">
 
 
-  <section id="hero" class="hero-section">
+  <div id="hero-wrapper">
+<section id="hero" class="hero-section">
     <nav class="hero-top-nav">
-  <a href="#reference">reference</a>
-  <a href="#kontakty">kontakty</a>
-  <a href="#onas">o nás</a>
+  <a href="#" onclick="showSection('reference')">reference</a>
+  <a href="#" onclick="showSection('kontakty')">kontakty</a>
+  <a href="#" onclick="showSection('onas')">o nás</a>
 </nav>
 <div class="hero-menu-container left">
       <h3 class="hero-menu-title">Služby:</h3>
@@ -49,16 +51,18 @@
     <div class="kontakt-box">📞 +420 725 102 447</div>
   
     <nav>
-      <a href="#reference">reference</a>
-      <a href="#kontakty">kontakty</a>
-      <a href="#onas">o nás</a>
+      <a href="#" onclick="showSection('reference')">reference</a>
+      <a href="#" onclick="showSection('kontakty')">kontakty</a>
+      <a href="#" onclick="showSection('onas')">o nás</a>
     </nav>
   </header>
 
   <!-- Obsah -->
   <main>
     <!-- Predvolený obsah: úvod a služby -->
-    <div id="default-sections">
+    </section>
+
+<div id="default-sections">
       <!-- Sekcie služieb -->
       <section id="instalaterskeSluzby" class="section">
         <h2>Instalatérské služby</h2>
@@ -201,7 +205,8 @@
     </div>
 
     <!-- Skryté sekcie -->
-    <section id="reference" class="section hidden">
+    <div id="page-sections">
+<section id="reference" class="section hidden">
       <h2>Reference</h2>
       <p>(Sekcia na doplnenie)</p>
       <div class="back-button" style="margin-top: 30px;">
@@ -285,24 +290,29 @@
         <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
       </div>
     </section>
-
-  </main>
+</div>
+</main>
   <script src="main.js"></script>
   
-  <script>
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
+  
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (typeof currentSection !== "undefined" && currentSection === "default") {
       if (window.scrollY > 100) {
         header.style.top = "0";
       } else {
         header.style.top = "-100px";
       }
-    });
-  </script>
+    }
+  });
+</script>
 
+
+  </div>
   <footer class="footer-bar">
     <div class="footer-content">
-      <div>info@bestfivesro.cz</div>
+      <div>bestfivesro@seznam.cz</div>
       <div>Ždírec 156, 588 13 Polná, ČR</div>
       <div>© 2025 BEST5 s.r.o. Všechna práva vyhrazena.</div>
     </div>
