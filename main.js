@@ -14,6 +14,9 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 function showDefault() {
+  document.querySelectorAll("main > section").forEach(sec => sec.classList.add("hidden"));
+  document.getElementById("default-sections").classList.remove("hidden");
+  document.getElementById("hero").scrollIntoView({ behavior: 'smooth' });
   special.forEach(i => document.getElementById(i)?.classList.add('hidden'));
   defaultDiv.classList.remove('hidden');
 }
