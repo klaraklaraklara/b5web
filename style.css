@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f7f5f1;
+  background-color: #b5a391 ;
   margin: 0;
   padding: 0;
   color: #000;
@@ -10,12 +10,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 4px 20px;
+  background-color: #b5a391; 
   border-bottom: 1px solid #aaa;
   position: sticky;
   top: 0;
-  background-color: #f7f5f1;
   z-index: 1000;
+  gap: 20px;
 }
 
 .logo {
@@ -322,4 +323,117 @@ a:hover {
 
 .back-button button:hover {
   background-color: #333;
+}
+
+.telefon {
+  font-weight: bold;
+  color: #000;
+  margin-left: 20px;
+}
+
+
+
+.hero-section {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  max-width: 240px;
+  margin-bottom: 30px;
+}
+
+.hero-text {
+  font-size: 24px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.scroll-button {
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.hero-menu-container.left {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  text-align: left;
+}
+
+.hero-menu-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.hero-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-menu li {
+  margin-bottom: 10px;
+}
+
+.hero-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Sticky hidden header */
+header {
+  transition: top 0.3s ease-in-out;
+  top: -100px;
+  position: fixed;
+  width: 100%;
+  background-color: #b5a391;
+  z-index: 1000;
+}
+
+header {
+  z-index: 9999;
+}
+
+.footer-bar {
+  background-color: #3d362f;
+  color: white;
+  font-size: 13px;
+  padding: 12px 20px;
+  text-align: center;
 }

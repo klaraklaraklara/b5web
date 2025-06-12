@@ -71,3 +71,22 @@ const sliderIds = ['instalaterskeSluzby', 'topenarskeSluzby', 'stehovani', 'odta
   });
 
   
+
+function hideHeroAndShow(id) {
+  document.getElementById('hero').style.display = 'none';
+  const sections = ['reference', 'kontakty', 'onas'];
+  sections.forEach(s => {
+    document.getElementById(s).classList.add('hidden');
+  });
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo(0, 0);
+}
+
+// Replace nav clicks (manually override if needed)
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('href').replace('#','');
+    hideHeroAndShow(id);
+  });
+});

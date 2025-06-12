@@ -11,44 +11,49 @@
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="resources/Best5.png" alt="BEST5" />
-  </div>
-  <nav>
-    <a href="#reference">reference</a>
-    <a href="#kontakty">kontakty</a>
-    <a href="#onas">o nás</a>
-  </nav>
-</header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-menu-container left">
+      <h3 class="hero-menu-title">Služby:</h3>
+      <ul class="hero-menu">
+        <li><a href="#instalateri"><img src="resources/Icons/instalater.png" width="20"> instalatérské služby</a></li>
+        <li><a href="#topenari"><img src="resources/Icons/topeni.png" width="20"> topenářské služby</a></li>
+        <li><a href="#stehovani"><img src="resources/Icons/stehovani.png" width="20"> stěhování těžkých předmětů</a></li>
+        <li><a href="#odtahy"><img src="resources/Icons/odtah.png" width="20"> odtahové služby</a></li>
+        <li><a href="#tepovani"><img src="resources/Icons/tepovani.png" width="20"> tepování</a></li>
+        <li><a href="#dezinfekce"><img src="resources/Icons/dezinfekce.png" width="20"> dezinfekce ozonem</a></li>
+      </ul>
+    </div>
+    <div class="hero-center">
+      <img src="resources/Best5.png" alt="BEST5 logo" class="hero-logo" />
+      <p class="hero-text">
+        Nabízíme komplexní technické<br>
+        a úklidové služby pro domácnosti i firmy<br>
+        s důrazem na kvalitu a spolehlivost.
+      </p>
+      <a href="#default-sections" class="scroll-button">↓</a>
+    </div>
+  </section>
+
+
+  <header>
+    <div class="logo">
+      <img src="resources/Best5.png" alt="BEST5" />
+    </div>
+  
+    <div class="kontakt-box">📞 +420 725 102 447</div>
+  
+    <nav>
+      <a href="#reference">reference</a>
+      <a href="#kontakty">kontakty</a>
+      <a href="#onas">o nás</a>
+    </nav>
+  </header>
 
   <!-- Obsah -->
   <main>
     <!-- Predvolený obsah: úvod a služby -->
     <div id="default-sections">
-      <!-- Úvodná sekcia -->
-      <section id="uvod" class="section">
-        <div class="uvod-wrapper">
-          <div class="sluzby">
-            <ul>
-              <li><img src="resources/Icons/instalater.png" alt="Instalatér" width="25"> <a href="#instalateri">instalatérské služby</a></li>
-              <li><img src="resources/Icons/topeni.png" alt="Topenář" width="30"> <a href="#topenari">topenářské služby</a></li>
-              <li><img src="resources/Icons/stehovani.png" alt="Stěhování" width="25"> <a href="#stehovani">stěhování těžkých předmětů</a></li>
-              <li><img src="resources/Icons/odtah.png" alt="Odtah" width="25"> <a href="#odtahy">odtahové služby</a></li>
-              <li><img src="resources/Icons/tepovani.png" alt="Tepování" width="25"> <a href="#tepovani">tepování</a></li>
-              <li><img src="resources/Icons/dezinfekce.png" alt="Dezinfekce" width="25"> <a href="#dezinfekce">dezinfekce ozonem</a></li>
-            </ul>
-          </div>
-          <div class="uvod-info">
-            <div class="wrapper">
-              <div class="kontakt-box">📞 +420 725 102 447</div>
-            </div>
-            <div class="uvod-text">
-              <p>Nabízíme komplexní technické<br>a úklidové služby pro domácnosti i firmy<br>s důrazem na kvalitu a spolehlivost.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Sekcie služieb -->
       <section id="instalaterskeSluzby" class="section">
         <h2>Instalatérské služby</h2>
@@ -278,5 +283,24 @@
 
   </main>
   <script src="main.js"></script>
-  </body>
+  
+  <script>
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (window.scrollY > 100) {
+        header.style.top = "0";
+      } else {
+        header.style.top = "-100px";
+      }
+    });
+  </script>
+
+  <footer class="footer-bar">
+    <div class="footer-content">
+      <div>info@bestfivesro.cz</div>
+      <div>Ždírec 156, 588 13 Polná, ČR</div>
+      <div>© 2025 BEST5 s.r.o. Všechna práva vyhrazena.</div>
+    </div>
+  </footer>
+</body>
   </html>
