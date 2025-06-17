@@ -34,6 +34,7 @@
     <nav class="hero-top-nav">
   <a href="#" onclick="showSection('reference')">Reference</a>
   <a href="#" onclick="showSection('kontakty')">Kontakty</a>
+  <a href="#" onclick="showSection('galerie')">Galerie</a>
   <a href="#" onclick="showSection('onas')">O nás</a>
 </nav>
 <div class="hero-menu-container left">
@@ -45,6 +46,7 @@
         <li><a href="#odtahy"><img src="resources/Icons/odtah.png" width="20"> odtahové služby</a></li>
         <li><a href="#tepovani"><img src="resources/Icons/tepovani.png" width="20"> tepování</a></li>
         <li><a href="#dezinfekce"><img src="resources/Icons/dezinfekce.png" width="20"> dezinfekce ozonem</a></li>
+<li><a href="#" onclick="showSection('galerie')"><img src="resources/Icons/instalater.png" width="20"> galerie</a></li>
       </ul>
     </div>
     <div class="hero-center">
@@ -70,7 +72,8 @@
     <nav>
       <a href="#" onclick="showSection('reference')">Reference</a>
       <a href="#" onclick="showSection('kontakty')">Kontakty</a>
-      <a href="#" onclick="showSection('onas')">O nás</a>
+      <a href="#" onclick="showSection('galerie')">Galerie</a>
+  <a href="#" onclick="showSection('onas')">O nás</a>
     </nav>
   </header>
 
@@ -356,6 +359,42 @@
       </div>
     </section>
 </div>
+
+<section id="galerie" class="section hidden">
+  <h2>Galerie</h2>
+  <div class="photo-gallery">
+    <img src="resources/Photos/instalaterskeSluzby1.jpg" alt="Galerie" onclick="openLightbox(0)">
+    <img src="resources/Photos/instalaterskeSluzby2.jpg" alt="Galerie" onclick="openLightbox(1)">
+    <img src="resources/Photos/instalaterskeSluzby3.jpg" alt="Galerie" onclick="openLightbox(2)">
+    <img src="resources/Photos/instalaterskeSluzby4.jpg" alt="Galerie" onclick="openLightbox(3)">
+    <img src="resources/Photos/topeni1.jpg" alt="Galerie" onclick="openLightbox(4)">
+    <img src="resources/Photos/topeni2.jpg" alt="Galerie" onclick="openLightbox(5)">
+    <img src="resources/Photos/topeni3.jpg" alt="Galerie" onclick="openLightbox(6)">
+    <img src="resources/Photos/stehovani1.jpg" alt="Galerie" onclick="openLightbox(7)">
+    <img src="resources/Photos/stehovani2.jpg" alt="Galerie" onclick="openLightbox(8)">
+    <img src="resources/Photos/stehovani3.jpg" alt="Galerie" onclick="openLightbox(9)">
+    <img src="resources/Photos/odtah1.jpg" alt="Galerie" onclick="openLightbox(10)">
+    <img src="resources/Photos/odtah2.jpg" alt="Galerie" onclick="openLightbox(11)">
+    <img src="resources/Photos/tepovani1.jpg" alt="Galerie" onclick="openLightbox(12)">
+    <img src="resources/Photos/tepovani2.jpg" alt="Galerie" onclick="openLightbox(13)">
+    <img src="resources/Photos/tepovani3.jpg" alt="Galerie" onclick="openLightbox(14)">
+    <img src="resources/Photos/tepovani4.jpg" alt="Galerie" onclick="openLightbox(15)">
+    <img src="resources/Photos/tepovani5.jpg" alt="Galerie" onclick="openLightbox(16)">
+    <img src="resources/Photos/tepovani6.jpg" alt="Galerie" onclick="openLightbox(17)">
+    <img src="resources/Photos/dezinfekce1.jpg" alt="Galerie" onclick="openLightbox(18)">
+  </div>
+  <div class="back-button">
+    <button onclick="showDefault()">Zpět na hlavní stránku</button>
+  </div>
+</section>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">×</span>
+  <span class="nav-btn prev-btn" onclick="prevLightbox()">❮</span>
+  <img id="lightbox-img" src="" alt="">
+  <span class="nav-btn next-btn" onclick="nextLightbox()">❯</span>
+</div>
+
 </main>
   <script src="main.js"></script>
   

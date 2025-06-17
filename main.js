@@ -109,3 +109,50 @@ window.addEventListener('resize', () => {
 });
 
 
+
+
+
+let currentImageIndex = 0;
+const galleryImages = [
+  "resources/Photos/instalaterskeSluzby1.jpg",
+  "resources/Photos/instalaterskeSluzby2.jpg",
+  "resources/Photos/instalaterskeSluzby3.jpg",
+  "resources/Photos/instalaterskeSluzby4.jpg",
+  "resources/Photos/topeni1.jpg",
+  "resources/Photos/topeni2.jpg",
+  "resources/Photos/topeni3.jpg",
+  "resources/Photos/stehovani1.jpg",
+  "resources/Photos/stehovani2.jpg",
+  "resources/Photos/stehovani3.jpg",
+  "resources/Photos/odtah1.jpg",
+  "resources/Photos/odtah2.jpg",
+  "resources/Photos/tepovani1.jpg",
+  "resources/Photos/tepovani2.jpg",
+  "resources/Photos/tepovani3.jpg",
+  "resources/Photos/tepovani4.jpg",
+  "resources/Photos/tepovani5.jpg",
+  "resources/Photos/tepovani6.jpg",
+  "resources/Photos/dezinfekce1.jpg"
+];
+
+function openLightbox(index) {
+  currentImageIndex = index;
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = galleryImages[currentImageIndex];
+  lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function nextLightbox() {
+  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+  document.getElementById("lightbox-img").src = galleryImages[currentImageIndex];
+}
+
+function prevLightbox() {
+  currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+  document.getElementById("lightbox-img").src = galleryImages[currentImageIndex];
+}
