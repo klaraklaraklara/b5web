@@ -14,14 +14,35 @@
 <style>
 .img-wrapper {
   flex: 1;
+  position: relative;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .img-wrapper img {
   width: 100%;
   max-width: 420px;
   height: auto;
   border-radius: 8px;
+  display: block;
+}
+.img-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+.img-wrapper:hover .overlay {
+  opacity: 1;
 }
 </style></head>
 <div class="social-bar">
@@ -54,23 +75,22 @@
 <li><a href="#odtahy"><img src="resources/Icons/odtah.png" width="20"/> odtahové služby</a></li>
 <li><a href="#tepovani"><img src="resources/Icons/tepovani.png" width="20"/> tepování</a></li>
 <li><a href="#dezinfekce"><img src="resources/Icons/dezinfekce.png" width="20"/> dezinfekce ozonem</a></li>
-<li><a href="#" onclick="showSection('galerie')"><img src="resources/Icons/instalater.png" width="20"/> galerie</a></li>
 </ul>
 </div>
 <div class="hero-center">
-<img alt="BEST5 logo" class="hero-logo" src="resources/Best5.png">
+<img alt="BEST5 logo" class="hero-logo" src="resources/Best5.png"/>
 <p class="hero-text">
         Nabízíme komplexní technické<br/>
         a úklidové služby pro domácnosti i firmy<br/>
         s důrazem na kvalitu a spolehlivost.
       </p>
 <a class="scroll-button" href="#default-sections">↓</a>
-</img></div>
+</div>
 </section>
 <header>
 <div class="logo" onclick="showDefault()" style="cursor: pointer;">
-<img alt="BEST5" src="resources/Best5.png">
-</img></div>
+<img alt="BEST5" src="resources/Best5.png"/>
+</div>
 <div class="kontakt-box">📞 +420 725 102 447</div>
 <nav>
 <a href="#" onclick="showSection('reference')">Reference</a>
@@ -82,7 +102,6 @@
 <!-- Obsah -->
 <main>
 <!-- Predvolený obsah: úvod a služby -->
-
 <div id="default-sections">
 <!-- Sekcie služieb -->
 <section class="section" id="instalaterskeSluzby">
@@ -98,8 +117,7 @@
 <li>Požární rozvody a hydranty</li>
 <li>Praxe a zkušenosti více než 30 let</li>
 </ul>
-
-<div class="img-wrapper"><img alt="instalaterskeSluzby obrázek" src="resources/Photos/instalaterskeSluzby1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="instalaterskeSluzby obrázek" src="resources/Photos/instalaterskeSluzby1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 <section class="section" id="topenarskeSluzby">
 <h2>Topenářské služby</h2>
@@ -112,8 +130,7 @@
 <li>Čištění a ošetření otopných systémů robotem</li>
 <li>Rems – úspora nákladů vytápění až 15 %</li>
 </ul>
-
-<div class="img-wrapper"><img alt="topenarskeSluzby obrázek" src="resources/Photos/topeni1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="topenarskeSluzby obrázek" src="resources/Photos/topeni1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 <section class="section" id="stehovani">
 <h2>Stěhování těžkých předmětů</h2>
@@ -123,8 +140,7 @@
 <li>Např.: teplovodní kotle, ohřívače vody, lednice, skříně, trezory apod.</li>
 <li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
 </ul>
-
-<div class="img-wrapper"><img alt="stehovani obrázek" src="resources/Photos/stehovani1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="stehovani obrázek" src="resources/Photos/stehovani1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 <section class="section" id="odtahy">
 <h2>Odtahové služby</h2>
@@ -137,8 +153,7 @@
 <li>Vlastní odtahový speciál s navijákem a nájezdovou rampou</li>
 <li>Rychlý výjezd a profesionální přístup</li>
 </ul>
-
-<div class="img-wrapper"><img alt="odtahy obrázek" src="resources/Photos/odtah1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="odtahy obrázek" src="resources/Photos/odtah1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 <section class="section" id="tepovani">
 <h2>Tepování</h2>
@@ -151,8 +166,7 @@
 <li>Vysušení vyčištěného povrchu</li>
 <li>Výkonný sací motor – minimum vlhkosti</li>
 </ul>
-
-<div class="img-wrapper"><img alt="tepovani obrázek" src="resources/Photos/tepovani1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="tepovani obrázek" src="resources/Photos/tepovani1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 <section class="section" id="dezinfekce">
 <h2>Dezinfekce ozonem</h2>
@@ -165,8 +179,7 @@
 <li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
 <li>Odstraňuje i skryté plísně a nečistoty</li>
 </ul>
-
-<div class="img-wrapper"><img alt="dezinfekce obrázek" src="resources/Photos/dezinfekce1.jpg"/></div></div>
+<div class="img-wrapper"><img alt="dezinfekce obrázek" src="resources/Photos/dezinfekce1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
 </section>
 </div>
 <!-- Skryté sekcie -->
