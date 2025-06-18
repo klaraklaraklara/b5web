@@ -1,365 +1,338 @@
 <!DOCTYPE html>
+
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>BESTFIVE s.r.o.</title>
-  <link rel="icon" type="image/x-icon" href="resources/Best5.png">
-  <link rel="icon" type="image/png" href="resources/Best5.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-  <style>.hidden { display: none; }</style>
-</head>
-
+<meta charset="utf-8"/>
+<title>BESTFIVE s.r.o.</title>
+<link href="resources/Best5.png" rel="icon" type="image/x-icon"/>
+<link href="resources/Best5.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>.hidden { display: none; }</style>
+<style>
+.img-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.img-wrapper img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.img-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+.img-wrapper:hover .overlay {
+  opacity: 1;
+}
+</style></head>
 <div class="social-bar">
-  <a href="https://www.facebook.com/profile.php?id=61573515516224" target="_blank" class="social-icon facebook" aria-label="Facebook">
-    <img src="resources/Icons/socials/fb.png" alt="Facebook" />
-  </a>
-  <a href="https://www.instagram.com/best5.cz/" target="_blank" class="social-icon instagram" aria-label="Instagram">
-    <img src="resources/Icons/socials/instagram.png" alt="Instagram" />
-  </a>
-  <a href="https://www.tiktok.com/@best5.cz" target="_blank" class="social-icon tiktok" aria-label="TikTok">
-    <img src="resources/Icons/socials/tiktok.png" alt="TikTok" />
-  </a>
+<a aria-label="Facebook" class="social-icon facebook" href="https://www.facebook.com/profile.php?id=61573515516224" target="_blank">
+<img alt="Facebook" src="resources/Icons/socials/fb.png"/>
+</a>
+<a aria-label="Instagram" class="social-icon instagram" href="https://www.instagram.com/best5.cz/" target="_blank">
+<img alt="Instagram" src="resources/Icons/socials/instagram.png"/>
+</a>
+<a aria-label="TikTok" class="social-icon tiktok" href="https://www.tiktok.com/@best5.cz" target="_blank">
+<img alt="TikTok" src="resources/Icons/socials/tiktok.png"/>
+</a>
 </div>
-
-
 <body>
-  <div class="content-wrapper">
-
-
-  <div id="hero-wrapper">
-<section id="hero" class="hero-section">
-    <nav class="hero-top-nav">
-  <a href="#" onclick="showSection('reference')">Reference</a>
-  <a href="#" onclick="showSection('kontakty')">Kontakty</a>
-  <a href="#" onclick="showSection('onas')">O nás</a>
+<div class="content-wrapper">
+<div id="hero-wrapper">
+<section class="hero-section" id="hero">
+<nav class="hero-top-nav">
+<a href="#" onclick="showSection('reference')">Reference</a>
+<a href="#" onclick="showSection('kontakty')">Kontakty</a>
+<a href="#" onclick="showSection('galerie')">Galerie</a>
+<a href="#" onclick="showSection('onas')">O nás</a>
 </nav>
 <div class="hero-menu-container left">
-      <h3 class="hero-menu-title">Služby:</h3>
-      <ul class="hero-menu">
-        <li><a href="#instalaterskeSluzby"><img src="resources/Icons/instalater.png" width="20"> instalatérské služby</a></li>
-        <li><a href="#topenarskeSluzby"><img src="resources/Icons/topeni.png" width="20"> topenářské služby</a></li>
-        <li><a href="#stehovani"><img src="resources/Icons/stehovani.png" width="20"> stěhování těžkých předmětů</a></li>
-        <li><a href="#odtahy"><img src="resources/Icons/odtah.png" width="20"> odtahové služby</a></li>
-        <li><a href="#tepovani"><img src="resources/Icons/tepovani.png" width="20"> tepování</a></li>
-        <li><a href="#dezinfekce"><img src="resources/Icons/dezinfekce.png" width="20"> dezinfekce ozonem</a></li>
-      </ul>
-    </div>
-    <div class="hero-center">
-      <img src="resources/Best5.png" alt="BEST5 logo" class="hero-logo" />
-      <p class="hero-text">
-        Nabízíme komplexní technické<br>
-        a úklidové služby pro domácnosti i firmy<br>
+<h3 class="hero-menu-title">Služby:</h3>
+<ul class="hero-menu">
+<li><a href="#instalaterskeSluzby"><img src="resources/Icons/instalater.png" width="20"/> instalatérské služby</a></li>
+<li><a href="#topenarskeSluzby"><img src="resources/Icons/topeni.png" width="20"/> topenářské služby</a></li>
+<li><a href="#stehovani"><img src="resources/Icons/stehovani.png" width="20"/> stěhování těžkých předmětů</a></li>
+<li><a href="#odtahy"><img src="resources/Icons/odtah.png" width="20"/> odtahové služby</a></li>
+<li><a href="#tepovani"><img src="resources/Icons/tepovani.png" width="20"/> tepování</a></li>
+<li><a href="#dezinfekce"><img src="resources/Icons/dezinfekce.png" width="20"/> dezinfekce ozonem</a></li>
+</ul>
+</div>
+<div class="hero-center">
+<img alt="BEST5 logo" class="hero-logo" src="resources/Best5.png"/>
+<p class="hero-text">
+        Nabízíme komplexní technické<br/>
+        a úklidové služby pro domácnosti i firmy<br/>
         s důrazem na kvalitu a spolehlivost.
       </p>
-      <a href="#default-sections" class="scroll-button">↓</a>
-    </div>
-  </section>
-
-
-  <header>
-    <div class="logo" onclick="showDefault()" style="cursor: pointer;">
-      <img src="resources/Best5.png" alt="BEST5" />
-    </div>
-    
-  
-    <div class="kontakt-box">📞 +420 725 102 447</div>
-  
-    <nav>
-      <a href="#" onclick="showSection('reference')">Reference</a>
-      <a href="#" onclick="showSection('kontakty')">Kontakty</a>
-      <a href="#" onclick="showSection('onas')">O nás</a>
-    </nav>
-  </header>
-
-  <!-- Obsah -->
-  <main>
-    <!-- Predvolený obsah: úvod a služby -->
-    </section>
-
+<a class="scroll-button" href="#default-sections">↓</a>
+</div>
+</section>
+<header>
+<div class="logo" onclick="showDefault()" style="cursor: pointer;">
+<img alt="BEST5" src="resources/Best5.png"/>
+</div>
+<div class="kontakt-box">📞 +420 725 102 447</div>
+<nav>
+<a href="#" onclick="showSection('reference')">Reference</a>
+<a href="#" onclick="showSection('kontakty')">Kontakty</a>
+<a href="#" onclick="showSection('galerie')">Galerie</a>
+<a href="#" onclick="showSection('onas')">O nás</a>
+</nav>
+</header>
+<!-- Obsah -->
+<main>
+<!-- Predvolený obsah: úvod a služby -->
 <div id="default-sections">
-      <!-- Sekcie služieb -->
-      <section id="instalaterskeSluzby" class="section">
-        <h2>Instalatérské služby</h2>
-        <div class="sluzby-flex">
-          <ul>
-            <li>Montáže a opravy, vodoinstalace odpadů</li>
-            <li>Montáže a dodávky zařizovacích předmětů</li>
-            <li>Montáže ohřívačů vody</li>
-            <li>Dezinfekce potrubí dle ČSN</li>
-            <li>Strojní čištění odpadů</li>
-            <li>Kamerové prohlídky</li>
-            <li>Požární rozvody a hydranty</li>
-            <li>Praxe a zkušenosti více než 30 let</li>
-          </ul>
-          <div class="slider-container" id="slider-instalaterskeSluzby">
-            <button class="slider-button prev" onclick="slide('instalaterskeSluzby',-1)">←</button>
-            <div class="slider-track">
-              <img src="resources/Photos/instalaterskeSluzby1.jpg" alt="Montaz 1">
-              <img src="resources/Photos/instalaterskeSluzby2.jpg" alt="Montaz 2">
-              <img src="resources/Photos/instalaterskeSluzby3.jpg" alt="Montaz 3">
-              <img src="resources/Photos/instalaterskeSluzby4.jpg" alt="Montaz 4">
-            </div>
-            <button class="slider-button next" onclick="slide('instalaterskeSluzby',1)">→</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="topenarskeSluzby" class="section">
-        <h2>Topenářské služby</h2>
-        <div class="sluzby-flex">
-          <ul>
-            <li>Montáže ústředního topení v materiálech CU, plast a uhlíková ocel</li>
-            <li>Montáže radiátorů a topných žebříků, termostatických ventilů a hlavic</li>
-            <li>Dodávka a montáž kotlů, ohřívačů a tepelných čerpadel</li>
-            <li>Plnění a vypouštění otopných soustav – Rems</li>
-            <li>Čištění a ošetření otopných systémů robotem</li>
-            <li>Rems – úspora nákladů vytápění až 15 %</li>
-          </ul>
-          <div class="slider-container" id="slider-topenarskeSluzby">
-            <button class="slider-button prev" onclick="slide('topenarskeSluzby',-1)">←</button>
-            <div class="slider-track">
-              <img src="resources/Photos/topeni1.jpg" alt="Topenar 1">
-              <img src="resources/Photos/topeni2.jpg" alt="Topenar 2">
-              <img src="resources/Photos/topeni3.jpg" alt="Topenar 3">
-            </div>
-            <button class="slider-button next" onclick="slide('topenarskeSluzby',1)">→</button>
-          </div>
-        </div>
-      </section>
-      
-      <section id="stehovani" class="section">
-        <h2>Stěhování těžkých předmětů</h2>
-        <div class="sluzby-flex">
-          <ul>
-            <li>Stěhování předmětu o hmotnosti až do 0,5t po schodech</li>
-            <li>Např.: teplovodní kotle, ohřívače vody, lednice, skříně, trezory apod.</li>
-            <li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
-          </ul>
-          <div class="slider-container" id="slider-stehovani">
-            <button class="slider-button prev" onclick="slide('stehovani',-1)">←</button>
-            <div class="slider-track">
-              <img src="resources/Photos/stehovani1.jpg" alt="Topenar 1">
-              <img src="resources/Photos/stehovani2.jpg" alt="Topenar 2">
-              <img src="resources/Photos/stehovani3.jpg" alt="Topenar 3">
-            </div>
-            <button class="slider-button next" onclick="slide('stehovani',1)">→</button>
-          </div>
-        </div>
-        
-      </section>
-      <section id="odtahy" class="section">
-        <h2>Odtahové služby</h2>
-          <div class="sluzby-flex">
-            <ul>
-              <li>Odtahy osobních i užitkových vozidel do 3,5 t</li>
-              <li>Asistenční služba při poruchách a nehodách</li>
-              <li>Odtah z garáží, parkovišť a těžko přístupných míst</li>
-              <li>Možnost přepravy strojů a menší techniky</li>
-              <li>Vlastní odtahový speciál s navijákem a nájezdovou rampou</li>
-              <li>Rychlý výjezd a profesionální přístup</li>
-            </ul>
-            <div class="slider-container" id="slider-odtahy">
-              <button class="slider-button prev" onclick="slide('odtahy',-1)">←</button>
-              <div class="slider-track">
-                <img src="resources/Photos/odtah1.jpg" alt="Odtahy 1">
-                <img src="resources/Photos/odtah2.jpg" alt="Odtahy 2">
-              </div>
-              <button class="slider-button next" onclick="slide('odtahy',1)">→</button>
-            </div>
-          </div>
-        
-      </section>
-      <section id="tepovani" class="section">
-        <h2>Tepování</h2>
-        <div class="sluzby-flex">
-          <ul>
-            <li>Odstranění hloubkových nečistot</li>
-            <li>Použití nejefektivnější techniky na trhu</li>
-            <li>Horkovodní extrakční technologie pro maximální účinnost čištění</li>
-            <li>Obnovíme svěžest a barvy</li>
-            <li>Vysušení vyčištěného povrchu</li>
-            <li>Výkonný sací motor – minimum vlhkosti</li>
-          </ul>
-          <div class="slider-container" id="slider-tepovani">
-            <button class="slider-button prev" onclick="slide('tepovani',-1)">←</button>
-            <div class="slider-track">
-              <img src="resources/Photos/tepovani1.jpg" alt="Tepovani 1">
-              <img src="resources/Photos/tepovani2.jpg" alt="Tepovani 2">
-              <img src="resources/Photos/tepovani3.jpg" alt="Tepovani 3">
-              <img src="resources/Photos/tepovani4.jpg" alt="Tepovani 4">
-              <img src="resources/Photos/tepovani5.jpg" alt="Tepovani 5">
-              <img src="resources/Photos/tepovani6.jpg" alt="Tepovani 6">
-            </div>
-            <button class="slider-button next" onclick="slide('tepovani',1)">→</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="dezinfekce" class="section">
-        <h2>Dezinfekce ozonem</h2>
-        <div class="sluzby-flex">
-          <ul>
-            <li>Nejúčinnější metoda dezinfekce</li>
-            <li>Rychlý proces</li>
-            <li>Eliminace pachu z kouře, plísní, potu či zvířat</li>
-            <li>Ideální pro alergiky a astmatiky</li>
-            <li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
-            <li>Odstraňuje i skryté plísně a nečistoty</li>
-          </ul>
-          <div class="slider-container" id="slider-dezinfekce">
-            <button class="slider-button prev" onclick="slide('dezinfekce',-1)">←</button>
-            <div class="slider-track">
-              <img src="resources/Photos/dezinfekce1.jpg" alt="Dezinfekce 1">
-              
-            </div>
-            <button class="slider-button next" onclick="slide('dezinfekce',1)">→</button>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Skryté sekcie -->
-    <div id="page-sections">
-      <section id="reference" class="section hidden">
-        <h2>Reference</h2>
-      
-        <div class="photo-gallery">
-          
-          <div class="photo-box">
-            <img src="resources/Photos/reference1.jpg" alt="obrazok1">
-            <div class="photo-description">
-              <p class="title">Generální oprava zděné brány s vraty</p>
-              <p class="location">Univerzita obrany, Brno</p>
-            </div>
-          </div>
-      
-          <div class="photo-box">
-            <img src="resources/Photos/reference2.jpg" alt="obrazok2">
-            <div class="photo-description">
-              <p class="title">Nájezdní rampa spediční společnosti</p>
-              <p class="location">Ulice Na Hranici, Jihlava</p>
-            </div>
-          </div>
-      
-          <div class="photo-box">
-            <img src="resources/Photos/reference3.jpg" alt="obrazok3">
-            <div class="photo-description">
-              <p class="title">Oprava interiéru zámecké kaple</p>
-              <p class="location">Státní zámek Stekník, okres Louny</p>
-            </div>
-          </div>
-      
-          <div class="photo-box">
-            <img src="resources/Photos/reference4.jpg" alt="obrazok4">
-            <div class="photo-description">
-              <p class="title">Oprava technologie</p>
-              <p class="location">Státní zámek Kynžvart, okres Cheb</p>
-            </div>
-          </div>
-      
-          <div class="photo-box">
-            <img src="resources/Photos/reference5.jpg" alt="obrazok5">
-            <div class="photo-description">
-              <p class="title">Výstavba sportovního hřiště</p>
-              <p class="location">Univerzita obrany, Brno</p>
-            </div>
-          </div>
-      
-          <div class="photo-box">
-            <img src="resources/Photos/reference6.jpg" alt="obrazok6">
-            <div class="photo-description">
-              <p class="title">Anglické dvorky</p>
-              <p class="location">Areál Dukla, Praha</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="back-button" style="margin-top: 30px;">
-          <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
-        </div>
-      </section>
-    
-    <section id="kontakty" class="section hidden">
-      <h2>Kontakty</h2>
-      <div class="kontakt-flex">
-        <!-- Ľavý box -->
-        <div class="kontakt-card">
-          <ul>
-            <li>
-              <img src="resources/ProfilePictures/foto1.jpg" alt="Jaroslav Novák" class="profil-foto">
-              <div>
-                <strong>Jaroslav Novák</strong><br>
+<!-- Sekcie služieb -->
+<section class="section" id="instalaterskeSluzby">
+<h2>Instalatérské služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Montáže a opravy, vodoinstalace odpadů</li>
+<li>Montáže a dodávky zařizovacích předmětů</li>
+<li>Montáže ohřívačů vody</li>
+<li>Dezinfekce potrubí dle ČSN</li>
+<li>Strojní čištění odpadů</li>
+<li>Kamerové prohlídky</li>
+<li>Požární rozvody a hydranty</li>
+<li>Praxe a zkušenosti více než 30 let</li>
+</ul>
+<div class="img-wrapper"><img alt="instalaterskeSluzby obrázek" src="resources/Photos/instalaterskeSluzby1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+<section class="section" id="topenarskeSluzby">
+<h2>Topenářské služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Montáže ústředního topení v materiálech CU, plast a uhlíková ocel</li>
+<li>Montáže radiátorů a topných žebříků, termostatických ventilů a hlavic</li>
+<li>Dodávka a montáž kotlů, ohřívačů a tepelných čerpadel</li>
+<li>Plnění a vypouštění otopných soustav – Rems</li>
+<li>Čištění a ošetření otopných systémů robotem</li>
+<li>Rems – úspora nákladů vytápění až 15 %</li>
+</ul>
+<div class="img-wrapper"><img alt="topenarskeSluzby obrázek" src="resources/Photos/topeni1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+<section class="section" id="stehovani">
+<h2>Stěhování těžkých předmětů</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Stěhování předmětu o hmotnosti až do 0,5t po schodech</li>
+<li>Např.: teplovodní kotle, ohřívače vody, lednice, skříně, trezory apod.</li>
+<li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
+</ul>
+<div class="img-wrapper"><img alt="stehovani obrázek" src="resources/Photos/stehovani1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+<section class="section" id="odtahy">
+<h2>Odtahové služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Odtahy osobních i užitkových vozidel do 3,5 t</li>
+<li>Asistenční služba při poruchách a nehodách</li>
+<li>Odtah z garáží, parkovišť a těžko přístupných míst</li>
+<li>Možnost přepravy strojů a menší techniky</li>
+<li>Vlastní odtahový speciál s navijákem a nájezdovou rampou</li>
+<li>Rychlý výjezd a profesionální přístup</li>
+</ul>
+<div class="img-wrapper"><img alt="odtahy obrázek" src="resources/Photos/odtah1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+<section class="section" id="tepovani">
+<h2>Tepování</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Odstranění hloubkových nečistot</li>
+<li>Použití nejefektivnější techniky na trhu</li>
+<li>Horkovodní extrakční technologie pro maximální účinnost čištění</li>
+<li>Obnovíme svěžest a barvy</li>
+<li>Vysušení vyčištěného povrchu</li>
+<li>Výkonný sací motor – minimum vlhkosti</li>
+</ul>
+<div class="img-wrapper"><img alt="tepovani obrázek" src="resources/Photos/tepovani1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+<section class="section" id="dezinfekce">
+<h2>Dezinfekce ozonem</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Nejúčinnější metoda dezinfekce</li>
+<li>Rychlý proces</li>
+<li>Eliminace pachu z kouře, plísní, potu či zvířat</li>
+<li>Ideální pro alergiky a astmatiky</li>
+<li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
+<li>Odstraňuje i skryté plísně a nečistoty</li>
+</ul>
+<div class="img-wrapper"><img alt="dezinfekce obrázek" src="resources/Photos/dezinfekce1.jpg"/><div class="overlay" onclick="showSection('galerie')">Projít do galerie</div></div></div>
+</section>
+</div>
+<!-- Skryté sekcie -->
+<div id="page-sections">
+<section class="section hidden" id="reference">
+<h2>Reference</h2>
+<div class="photo-gallery">
+<div class="photo-box">
+<img alt="obrazok1" src="resources/Photos/reference1.jpg"/>
+<div class="photo-description">
+<p class="title">Generální oprava zděné brány s vraty</p>
+<p class="location">Univerzita obrany, Brno</p>
+</div>
+</div>
+<div class="photo-box">
+<img alt="obrazok2" src="resources/Photos/reference2.jpg"/>
+<div class="photo-description">
+<p class="title">Nájezdní rampa spediční společnosti</p>
+<p class="location">Ulice Na Hranici, Jihlava</p>
+</div>
+</div>
+<div class="photo-box">
+<img alt="obrazok3" src="resources/Photos/reference3.jpg"/>
+<div class="photo-description">
+<p class="title">Oprava interiéru zámecké kaple</p>
+<p class="location">Státní zámek Stekník, okres Louny</p>
+</div>
+</div>
+<div class="photo-box">
+<img alt="obrazok4" src="resources/Photos/reference4.jpg"/>
+<div class="photo-description">
+<p class="title">Oprava technologie</p>
+<p class="location">Státní zámek Kynžvart, okres Cheb</p>
+</div>
+</div>
+<div class="photo-box">
+<img alt="obrazok5" src="resources/Photos/reference5.jpg"/>
+<div class="photo-description">
+<p class="title">Výstavba sportovního hřiště</p>
+<p class="location">Univerzita obrany, Brno</p>
+</div>
+</div>
+<div class="photo-box">
+<img alt="obrazok6" src="resources/Photos/reference6.jpg"/>
+<div class="photo-description">
+<p class="title">Anglické dvorky</p>
+<p class="location">Areál Dukla, Praha</p>
+</div>
+</div>
+</div>
+<div class="back-button" style="margin-top: 30px;">
+<button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+</div>
+</section>
+<section class="section hidden" id="galerie">
+<h2>Galerie</h2>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(0)" src="resources/Photos/instalaterskeSluzby1.jpg"/>
+<img alt="Galerie" onclick="openLightbox(1)" src="resources/Photos/instalaterskeSluzby2.jpg"/>
+<img alt="Galerie" onclick="openLightbox(2)" src="resources/Photos/instalaterskeSluzby3.jpg"/>
+<img alt="Galerie" onclick="openLightbox(3)" src="resources/Photos/instalaterskeSluzby4.jpg"/>
+<img alt="Galerie" onclick="openLightbox(4)" src="resources/Photos/topeni1.jpg"/>
+<img alt="Galerie" onclick="openLightbox(5)" src="resources/Photos/topeni2.jpg"/>
+<img alt="Galerie" onclick="openLightbox(6)" src="resources/Photos/topeni3.jpg"/>
+<img alt="Galerie" onclick="openLightbox(7)" src="resources/Photos/stehovani1.jpg"/>
+<img alt="Galerie" onclick="openLightbox(8)" src="resources/Photos/stehovani2.jpg"/>
+<img alt="Galerie" onclick="openLightbox(9)" src="resources/Photos/stehovani3.jpg"/>
+<img alt="Galerie" onclick="openLightbox(10)" src="resources/Photos/odtah1.jpg"/>
+<img alt="Galerie" onclick="openLightbox(11)" src="resources/Photos/odtah2.jpg"/>
+<img alt="Galerie" onclick="openLightbox(12)" src="resources/Photos/tepovani1.jpg"/>
+<img alt="Galerie" onclick="openLightbox(13)" src="resources/Photos/tepovani2.jpg"/>
+<img alt="Galerie" onclick="openLightbox(14)" src="resources/Photos/tepovani3.jpg"/>
+<img alt="Galerie" onclick="openLightbox(15)" src="resources/Photos/tepovani4.jpg"/>
+<img alt="Galerie" onclick="openLightbox(16)" src="resources/Photos/tepovani5.jpg"/>
+<img alt="Galerie" onclick="openLightbox(17)" src="resources/Photos/tepovani6.jpg"/>
+<img alt="Galerie" onclick="openLightbox(18)" src="resources/Photos/dezinfekce1.jpg"/>
+</div>
+<div class="back-button">
+<button onclick="showDefault()">Zpět na hlavní stránku</button>
+</div>
+</section>
+<section class="section hidden" id="kontakty">
+<h2>Kontakty</h2>
+<div class="kontakt-flex">
+<!-- Ľavý box -->
+<div class="kontakt-card">
+<ul>
+<li>
+<img alt="Jaroslav Novák" class="profil-foto" src="resources/ProfilePictures/foto1.jpg"/>
+<div>
+<strong>Jaroslav Novák</strong><br/>
                 +420 725 102 447
               </div>
-            </li>
-            <li>
-              <img src="resources/ProfilePictures/foto2.jpg" alt="Jaroslava Nováková" class="profil-foto">
-              <div>
-                <strong>Jaroslava Nováková</strong><br>
+</li>
+<li>
+<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto2.jpg"/>
+<div>
+<strong>Jaroslava Nováková</strong><br/>
                 +420 721 619 671
               </div>
-            </li>
-            <li>
-              <img src="resources/ProfilePictures/foto3.jpg" alt="Jaroslava Nováková" class="profil-foto">
-              <div>
-                <strong>Jaroslava Nováková</strong><br>
+</li>
+<li>
+<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto3.jpg"/>
+<div>
+<strong>Jaroslava Nováková</strong><br/>
                 +420 724 232 423
               </div>
-            </li>
-            <li>
-              <div>
-                <strong>E-mail:</strong><br>
-                <a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a>
-              </div>
-            </li>
-          </ul>
-          <div class="qr-codes">
-            <img src="qr/qr-code_instagram.png" alt="QR Instagram">
-            <img src="qr/qr-code-tiktok.png" alt="QR TikTok">
-            <img src="qr/qr-code-facebook.png" alt="QR Facebook">
-          </div>
-        </div>
-    
-        <!-- Pravý box -->
-        <div class="kontakt-right">
-          <p><strong>Adresa provozovny:</strong><br>Ždírec 156<br>588 13 Polná</p>
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.1096954305035!2d15.669006877150373!3d49.45339477141896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d0fe791dbb5c1%3A0x98d6339c577727c9!2zxb1kw61yZWMgMTU2LCA1ODggMTMgxb1kw61yZWM!5e1!3m2!1scs!2scz!4v1749153531578!5m2!1scs!2sc"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    
-      <div class="back-button">
-        <button onclick="showDefault()">Zpět na hlavní stránku</button>
-      </div>
-    </section>
-    
-    
-
-
-    <section id="onas" class="section hidden">
-      <h2>O nás</h2>
-      <p>Firma byla založena v roce 1992 podnikáním fyzické osoby. Společnost Bestfive s.r.o. jako pokračující firma byla založena v roce 2011.</p>
-      <p>Zpočátku se firma zabývala především instalatérskými a drobnými stavebními pracemi. Později se vyprofilovala na stavebnictví, zemní a výkopové práce a autodopravu, tyto služby poskytuje dodnes.</p>
-      <p>Zkušení zaměstnanci firmy dokáží realizovat jak menší stavební úpravy, opravy a rekonstrukce, tak domy na klíč, bourací práce, terénní úpravy, výkopové práce atd. Firma se také podílela na několika opravách historických objektů, např. Státního zámku Stekník, Státního hradu a zámku Bečov nad Teplou, Státního zámku Velké Březno a Státního zámku Kynžvart.</p>
-      <p>Pokud se týká služeb v autodopravení, firma vlastní několik nákladních vozů, velký odtahový speciál a autojeřáb. Je tedy možno realizovať odvozy materiálů, převзы kontejnerů, větších strojů, atd.</p>
-      <div class="back-button" style="margin-top: 30px;">
-        <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
-      </div>
-    </section>
+</li>
+<li>
+<div>
+<strong>E-mail:</strong><br/>
+<a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a>
+</div>
+</li>
+</ul>
+<div class="qr-codes">
+<img alt="QR Instagram" src="qr/qr-code_instagram.png"/>
+<img alt="QR TikTok" src="qr/qr-code-tiktok.png"/>
+<img alt="QR Facebook" src="qr/qr-code-facebook.png"/>
+</div>
+</div>
+<!-- Pravý box -->
+<div class="kontakt-right">
+<p><strong>Adresa provozovny:</strong><br/>Ždírec 156<br/>588 13 Polná</p>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.1096954305035!2d15.669006877150373!3d49.45339477141896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d0fe791dbb5c1%3A0x98d6339c577727c9!2zxb1kw61yZWMgMTU2LCA1ODggMTMgxb1kw61yZWM!5e1!3m2!1scs!2scz!4v1749153531578!5m2!1scs!2sc">
+</iframe>
+</div>
+</div>
+</div>
+<div class="back-button">
+<button onclick="showDefault()">Zpět na hlavní stránku</button>
+</div>
+</section>
+<section class="section hidden" id="onas">
+<h2>O nás</h2>
+<p>Firma byla založena v roce 1992 podnikáním fyzické osoby. Společnost Bestfive s.r.o. jako pokračující firma byla založena v roce 2011.</p>
+<p>Zpočátku se firma zabývala především instalatérskými a drobnými stavebními pracemi. Později se vyprofilovala na stavebnictví, zemní a výkopové práce a autodopravu, tyto služby poskytuje dodnes.</p>
+<p>Zkušení zaměstnanci firmy dokáží realizovat jak menší stavební úpravy, opravy a rekonstrukce, tak domy na klíč, bourací práce, terénní úpravy, výkopové práce atd. Firma se také podílela na několika opravách historických objektů, např. Státního zámku Stekník, Státního hradu a zámku Bečov nad Teplou, Státního zámku Velké Březno a Státního zámku Kynžvart.</p>
+<p>Pokud se týká služeb v autodopravení, firma vlastní několik nákladních vozů, velký odtahový speciál a autojeřáb. Je tedy možno realizovať odvozy materiálů, převзы kontejnerů, větších strojů, atd.</p>
+<div class="back-button" style="margin-top: 30px;">
+<button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
+</div>
+</section>
+</div>
+<div class="lightbox-overlay" id="lightbox">
+<span class="close-btn" onclick="closeLightbox()">×</span>
+<span class="nav-btn prev-btn" onclick="prevLightbox()">❮</span>
+<img alt="" id="lightbox-img" src=""/>
+<span class="nav-btn next-btn" onclick="nextLightbox()">❯</span>
 </div>
 </main>
-  <script src="main.js"></script>
-  
-  
+<script src="main.js"></script>
 <script>
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
@@ -372,15 +345,13 @@
     }
   });
 </script>
-
-
-  </div>
-  <footer class="footer-bar">
-    <div class="footer-content">
-      <div><a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a></div>
-      <div>Ždírec 156, 588 13 Polná, ČR</div>
-      <div>© 2025 BEST5 s.r.o. Všechna práva vyhrazena.</div>
-    </div>
-  </footer>
-</body>
-  </html>
+</div>
+<footer class="footer-bar">
+<div class="footer-content">
+<div><a href="mailto:bestfivesro@seznam.cz">bestfivesro@seznam.cz</a></div>
+<div>Ždírec 156, 588 13 Polná, ČR</div>
+<div>© 2025 BEST5 s.r.o. Všechna práva vyhrazena.</div>
+</div>
+</footer>
+</div></body>
+</html>

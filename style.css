@@ -696,3 +696,63 @@ main {
   height: 100%;
   object-fit: contain;
 }
+
+
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  display: none;
+}
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+.lightbox-overlay .close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+.lightbox-overlay .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 20px;
+}
+.lightbox-overlay .prev-btn {
+  left: 20px;
+}
+.lightbox-overlay .next-btn {
+  right: 20px;
+}
+
+
+#galerie .photo-gallery img {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+#galerie .photo-gallery img:hover {
+  transform: scale(1.05);
+}

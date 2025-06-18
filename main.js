@@ -56,56 +56,45 @@ function showDefault() {
 }
 
 
-//Slider
-const sliderStates = {
-  instalaterskeSluzby: { index: 0 },
-  topenarskeSluzby: { index: 0 },
-  stehovani: { index: 0 },
-  odtahy: { index: 0 },
-  tepovani: { index: 0 },
-  dezinfekce: { index: 0 }
-};
+// slider handling
+function slide(sectionId, direction) {
+  const container = document.querySelector(`#slider-${sectionId} .slider-track`);
+  if (!container) return;
 
-const sliderIds = ['instalaterskeSluzby', 'topenarskeSluzby', 'stehovani', 'odtahy', 'tepovani', 'dezinfekce'];
+  const slideWidth = container.querySelector("img")?.offsetWidth + 12 || 300;
+  const currentTransform = container.style.transform || "translateX(0px)";
+  const currentX = parseFloat(currentTransform.match(/-?\d+/)) || 0;
+  const newX = currentX - direction * slideWidth;
 
-function slide(sliderId, direction) {
-  const container = document.getElementById(`slider-${sliderId}`);
-  const track = container.querySelector(".slider-track");
-  const images = track.querySelectorAll("img");
-  const prevBtn = container.querySelector(".slider-button.prev");
-  const nextBtn = container.querySelector(".slider-button.next");
-
-  if (images.length === 0) return; 
-
-  const visibleCount = Math.floor(container.clientWidth / images[0].clientWidth);
-  const maxIndex = images.length - visibleCount;
-
-  const totalImagesWidth = images.length * (images[0].clientWidth + 12);
-
-  if (totalImagesWidth <= container.clientWidth) {
-    prevBtn.style.display = "none";
-    nextBtn.style.display = "none";
-  } else {
-    prevBtn.style.display = "block";
-    nextBtn.style.display = "block";
-  }
-
-  sliderStates[sliderId].index += direction;
-
-  if (sliderStates[sliderId].index < 0) {
-    sliderStates[sliderId].index = 0;
-  } else if (sliderStates[sliderId].index > maxIndex) {
-    sliderStates[sliderId].index = maxIndex;
-  }
-
-  const shift = -(images[0].clientWidth + 12) * sliderStates[sliderId].index;
-  track.style.transform = `translateX(${shift}px)`;
+  container.style.transform = `translateX(${newX}px)`;
 }
 
-sliderIds.forEach(id => slide(id, 0));
+// lightbox gallery
+let currentImageIndex = 0;
+function openLightbox(index) {
+  currentImageIndex = index;
+  const images = document.querySelectorAll("#galerie .photo-gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const imgElement = document.getElementById("lightbox-img");
 
-window.addEventListener('resize', () => {
-  sliderIds.forEach(id => slide(id, 0));
-});
+  if (images[index]) {
+    imgElement.src = images[index].src;
+    lightbox.style.display = "flex";
+  }
+}
 
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
 
+function prevLightbox() {
+  const images = document.querySelectorAll("#galerie .photo-gallery img");
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  openLightbox(currentImageIndex);
+}
+
+function nextLightbox() {
+  const images = document.querySelectorAll("#galerie .photo-gallery img");
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  openLightbox(currentImageIndex);
+}
