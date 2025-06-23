@@ -115,3 +115,18 @@ function moveSlide(button, direction) {
   track.style.transform = `translateX(-${index * imageWidth}px)`;
   container.dataset.index = index;
 }
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.slider-container').forEach(container => {
+    const images = container.querySelectorAll('.slider-track img');
+  
+    if (images.length <= 1) {
+      container.classList.add('single-slide');
+    }
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        showSection('galerie');
+      });
+    });
+  });
+});

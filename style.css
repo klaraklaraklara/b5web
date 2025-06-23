@@ -140,7 +140,7 @@ a:hover {
   background-color: #e0e0e0;
 }
 
-/*Jednotlive sluzby*/
+/* Jednotlivé služby */
 
 .sluzby {
   flex: 1;
@@ -148,12 +148,13 @@ a:hover {
   list-style: disc inside;
   padding: 0;
   margin: 0;
-   cursor: default;
+  cursor: default;
   color: #333;
   background: none;
   transition: none;
   text-decoration: none;
 }
+
 .sluzby-flex {
   display: grid;
   grid-template-columns: 480px auto;  /* pevná šírka textu + automatický obrázok */
@@ -176,33 +177,6 @@ a:hover {
   position: relative;
 }
 
-.img-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-.img-wrapper .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  text-align: center;
-  padding: 8px 0;
-  font-weight: bold;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.img-wrapper .overlay:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 .slider-container {
   position: relative;
   overflow: hidden;
@@ -220,6 +194,8 @@ a:hover {
   width: 100%;
   flex-shrink: 0;
   object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .slider-button {
@@ -242,17 +218,6 @@ a:hover {
 .slider-button.next {
   right: 8px;
 }
-.slider-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 400px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.slider-container:hover .overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
 
 .overlay {
   position: absolute;
@@ -267,7 +232,25 @@ a:hover {
   border-bottom-right-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-  z-index: 5;
+}
+
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.slider-container:hover .slider-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-container.single-slide .slider-button {
+  display: none !important;
 }
 
 
