@@ -203,7 +203,72 @@ a:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  padding: 6px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.slider-button.prev {
+  left: 8px;
+}
+
+.slider-button.next {
+  right: 8px;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.slider-container:hover .overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 5;
+}
 
 
 /*Kontakty*/

@@ -98,3 +98,20 @@ function nextLightbox() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   openLightbox(currentImageIndex);
 }
+
+//Slide fotiek na hlavnej stranke
+function moveSlide(button, direction) {
+  const container = button.closest('.slider-container');
+  const track = container.querySelector('.slider-track');
+  const images = track.querySelectorAll('img');
+  const imageWidth = images[0].clientWidth;
+
+  let index = Number(container.dataset.index) || 0;
+  index += direction;
+
+  if (index < 0) index = images.length - 1;
+  if (index >= images.length) index = 0;
+
+  track.style.transform = `translateX(-${index * imageWidth}px)`;
+  container.dataset.index = index;
+}
