@@ -159,7 +159,7 @@ a:hover {
   display: grid;
   grid-template-columns: 480px auto;  /* pevná šírka textu + automatický obrázok */
   align-items: start;
-  gap: 400px;              /* medzera medzi textom a obrázkom */
+  gap: 700px;              /* medzera medzi textom a obrázkom */
   margin-bottom: 60px;
   padding-left: 40px;     /* voliteľný posun vpravo celej sekcie */
 }
@@ -379,7 +379,7 @@ a:hover {
 
 .hero-section {
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/background.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/backgroundBright.png');
   background-size: cover;
   background-position: center;
   position: relative;
