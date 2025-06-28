@@ -1,9 +1,28 @@
+
+/* Vzhľad scrollbar-u (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;              
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;    
+  border-radius: 4px;
+  border: 1px solid #fff0; 
+}
+
 body {
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   background-color: #b5a391 ;
   margin: 0;
   padding: 0;
   color: #000;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(211, 57, 10) transparent;
 }
 
 header {
@@ -106,6 +125,10 @@ a:hover {
   margin-top: 20px;
   color: #aaa;
 }
+.uvod-wrapper, .wrapper {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -156,12 +179,15 @@ a:hover {
 }
 
 .sluzby-flex {
-  display: grid;
-  grid-template-columns: 480px auto;  /* pevná šírka textu + automatický obrázok */
-  align-items: start;
-  gap: 700px;              /* medzera medzi textom a obrázkom */
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
   margin-bottom: 60px;
-  padding-left: 40px;     /* voliteľný posun vpravo celej sekcie */
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-wrap: nowrap;    /* voliteľný posun vpravo celej sekcie */
 }
 
 .sluzby-flex ul {
@@ -529,6 +555,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -694,7 +721,7 @@ main {
 .social-bar {
   position: fixed;
   top: 50%;
-  right: 0;
+  right: 15px;
   transform: translateY(-50%);
   z-index: 9999;
   display: flex;
@@ -821,4 +848,175 @@ main {
   justify-content: center;
   gap: 15px;
   padding: 0 10px;
+}
+
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/*pre telefony*/
+
+@media (max-width: 480px) {
+  .hero-section {
+    background-position: 70% center;
+  }
+}
+
+@media (max-width: 768px) {
+ .mobile-hide {
+    display: none !important;
+  }
+
+  .nav-inline-mobile {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-inline-mobile a {
+    display: inline-block !important;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  header {
+    position: relative;
+    padding: 10px 15px;
+    flex-direction: column;
+    text-align: c6enter;
+  }
+
+  .hero-section {
+    padding-top: 20px;
+    margin-top: 0 !important;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px 10px;
+    text-align: center;
+  }
+   .hero-menu-container.left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+  }
+   .hero-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding: 0 10px;
+    color: #fff;
+  }
+
+  .hero-top-nav {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-top-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .hero-logo {
+    margin-bottom: 10px;
+    max-width: 140px;
+  }
+
+ .hero-menu {
+  padding: 0;
+  margin: 0;
+  }
+
+  .hero-menu a {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .hero-menu img {
+    filter: invert(1);
+  }
+  .hero-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  }
+
+  .hero-menu-title {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .hero-center {
+    height: auto;
+    padding-top: 40px;
+  }
+
+  #onas, #reference, #galerie, #kontakty {
+    padding-top: 100px;
+  }
+
+  .sluzby-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .slider-track img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .qr-codes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery-category h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .social-bar {
+    bottom: 120px;
+    right: 10px;
+  }
 }
