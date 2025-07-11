@@ -200,6 +200,7 @@ a:hover {
 
 .img-wrapper {
   max-width: 400px;
+  max-height: 500px;
   position: relative;
 }
 
