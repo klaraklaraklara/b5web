@@ -130,3 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/*Statistiky - automaticky rok*/ 
+(function(){                                         
+  const START_YEAR = 2011;                           /*  rok zalozenia */
+  const years      = new Date().getFullYear() - START_YEAR; 
+  document.getElementById('years').textContent = years;     
+})();

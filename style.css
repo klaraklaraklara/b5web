@@ -87,7 +87,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ĂvodnĂĄ sekcia */
+/* Uvodna sekcia */
 .uvod-wrapper {
   display: flex;
   justify-content: space-between;
@@ -433,6 +433,8 @@ a:hover {
 }
 
 .hero-text {
+  user-select:none;          
+  -webkit-user-select:none;
   font-size: 24px;
   line-height: 1.6;
   color: white;
@@ -859,6 +861,30 @@ img, video {
 }
 
 
+/*Statistiky*/
+
+.stats-section{                 
+  display:flex;                   
+  gap:40px;                       
+  justify-content:center;         
+  padding:60px 20px;              
+  background:#e7dfd4;             
+}                                
+.stat-box{                        
+  text-align:center;              
+}                                 
+.stat-number{                     
+  font-size:48px;                 
+  font-weight:700;                
+  display:block;                 
+  margin-bottom:6px;              
+}                                 
+
+/* mobil ≤ 768 px – šírka pod seba */      /* 🆕 */
+@media(max-width:768px){          /* 🆕 */
+  .stats-section{flex-direction:column;} /* 🆕 */
+}
+
 /*pre telefony*/
 
 @media (max-width: 480px) {
@@ -1020,4 +1046,9 @@ img, video {
     bottom: 120px;
     right: 10px;
   }
+
+  /*Statistiky*/
+
+  .stats-section{flex-direction:column;}
+
 }
