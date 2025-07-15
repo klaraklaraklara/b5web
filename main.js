@@ -1,89 +1,7 @@
 
 let currentSection = "default";
 
-function showSection(sectionId) {
-  document.getElementById("stats-wrapper").style.display = "none";
-  currentSection = sectionId;
-  document.getElementById("default-sections").style.display = "none";
-  document.querySelectorAll("#page-sections .section").forEach((sec) => {
-    sec.classList.add("hidden");
-  });
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.classList.remove("hidden");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 
-  // Hide hero section
-  const hero = document.getElementById("hero");
-  if (hero) {
-    hero.style.display = "none";
-  }
-
-  const header = document.querySelector("header");
-  header.style.top = "0";
-}
-
-function showDefault() {
-  document.getElementById("stats-wrapper").style.display = "block";
-  // Hide other sections
-  document.querySelectorAll("#page-sections .section").forEach(section => {
-    section.classList.add("hidden");
-  });
-
-  // Show hero again
-  const hero = document.getElementById("hero");
-  if (hero) {
-    hero.style.display = "block";
-  }
-
-  // Show default sections
-  const defaultSections = document.getElementById("default-sections");
-  if (defaultSections) {
-    defaultSections.style.display = "block";
-  }
-
-  // Reset scroll position
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, 10);
-
-  // Hide the header
-  const header = document.querySelector("header");
-  if (header) {
-    header.style.top = "-100px";
-  }
-
-  currentSection = "default";
-}
-
-
-// slider handling
-function slide(sectionId, direction) {
-  const container = document.querySelector(`#slider-${sectionId} .slider-track`);
-  if (!container) return;
-
-  const slideWidth = container.querySelector("img")?.offsetWidth + 12 || 300;
-  const currentTransform = container.style.transform || "translateX(0px)";
-  const currentX = parseFloat(currentTransform.match(/-?\d+/)) || 0;
-  const newX = currentX - direction * slideWidth;
-
-  container.style.transform = `translateX(${newX}px)`;
-}
-
-// lightbox gallery
-let currentImageIndex = 0;
-function openLightbox(index) {
-  currentImageIndex = index;
-  const images = document.querySelectorAll("#galerie .photo-gallery img");
-  const lightbox = document.getElementById("lightbox");
-  const imgElement = document.getElementById("lightbox-img");
-
-  if (images[index]) {
-    imgElement.src = images[index].src;
-    lightbox.style.display = "flex";
-  }
-}
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
@@ -139,3 +57,141 @@ document.addEventListener('DOMContentLoaded', () => {
   const years      = new Date().getFullYear() - START_YEAR; 
   document.getElementById('years').textContent = years;     
 })();
+
+function showSection(id) {
+  // Hide default section
+  const defaultSection = document.getElementById("default-sections");
+  if (defaultSection) defaultSection.style.display = "none";
+
+  // Hide all other sections
+  document.querySelectorAll("#page-sections section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+
+  // Show selected section
+  const sectionToShow = document.getElementById(id);
+  if (sectionToShow) {
+    sectionToShow.classList.remove("hidden");
+    window.scrollTo({
+      top: sectionToShow.offsetTop - 80,
+      behavior: 'smooth'
+    });
+  }
+
+  // Update tracking variable
+  currentSection = id;
+}
+
+
+function showSection(id) {
+  // Hide default content
+  const defaultSection = document.getElementById("default-sections");
+  if (defaultSection) defaultSection.style.display = "none";
+
+  // Hide hero + stats
+  const heroWrapper = document.getElementById("hero-wrapper");
+  const statsWrapper = document.getElementById("stats-wrapper");
+  if (heroWrapper) heroWrapper.style.display = "none";
+  if (statsWrapper) statsWrapper.style.display = "none";
+
+  // Hide all hidden sections
+  document.querySelectorAll("#page-sections section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+
+  // Show selected section
+  const sectionToShow = document.getElementById(id);
+  if (sectionToShow) {
+    sectionToShow.classList.remove("hidden");
+    window.scrollTo({
+      top: sectionToShow.offsetTop - 60,
+      behavior: 'smooth'
+    });
+  }
+
+  currentSection = id;
+}
+
+
+function showSection(id) {
+  // Hide default content
+  const defaultSection = document.getElementById("default-sections");
+  if (defaultSection) defaultSection.style.display = "none";
+
+  // Show hidden section container
+  const pageSections = document.getElementById("page-sections");
+  if (pageSections) pageSections.style.display = "block";
+
+  // Hide hero + stats
+  const heroWrapper = document.getElementById("hero-wrapper");
+  const statsWrapper = document.getElementById("stats-wrapper");
+  if (heroWrapper) heroWrapper.style.display = "none";
+  if (statsWrapper) statsWrapper.style.display = "none";
+
+  // Hide all hidden sections
+  document.querySelectorAll("#page-sections section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+
+  // Show selected section
+  const sectionToShow = document.getElementById(id);
+  if (sectionToShow) {
+    sectionToShow.classList.remove("hidden");
+    window.scrollTo({
+      top: sectionToShow.offsetTop - 60,
+      behavior: 'smooth'
+    });
+  }
+
+  currentSection = id;
+}
+
+
+function showSection(id) {
+  console.log("Showing section:", id);
+
+  // Hide default section
+  const defaultSection = document.getElementById("default-sections");
+  if (defaultSection) {
+    defaultSection.style.display = "none";
+    console.log("Hid default section");
+  }
+
+  // Show container for hidden sections
+  const pageSections = document.getElementById("page-sections");
+  if (pageSections) {
+    pageSections.style.display = "block";
+    console.log("Displayed #page-sections");
+  }
+
+  // Hide hero and stats
+  const hero = document.getElementById("hero-wrapper");
+  const stats = document.getElementById("stats-wrapper");
+  if (hero) {
+    hero.style.display = "none";
+    console.log("Hid hero");
+  }
+  if (stats) {
+    stats.style.display = "none";
+    console.log("Hid stats");
+  }
+
+  // Hide all sections inside #page-sections
+  document.querySelectorAll("#page-sections section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+  console.log("Hid all #page-sections children");
+
+  // Show the selected one
+  const toShow = document.getElementById(id);
+  if (toShow) {
+    toShow.classList.remove("hidden");
+    console.log("Revealed section:", id);
+    window.scrollTo({
+      top: toShow.offsetTop - 60,
+      behavior: "smooth"
+    });
+  }
+
+  currentSection = id;
+}
