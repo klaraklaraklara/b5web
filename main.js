@@ -2,6 +2,7 @@
 let currentSection = "default";
 
 function showSection(sectionId) {
+  document.getElementById("stats-wrapper").style.display = "none";
   currentSection = sectionId;
   document.getElementById("default-sections").style.display = "none";
   document.querySelectorAll("#page-sections .section").forEach((sec) => {
@@ -24,6 +25,7 @@ function showSection(sectionId) {
 }
 
 function showDefault() {
+  document.getElementById("stats-wrapper").style.display = "block";
   // Hide other sections
   document.querySelectorAll("#page-sections .section").forEach(section => {
     section.classList.add("hidden");
@@ -130,3 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/*Statistiky - automaticky rok*/ 
+(function(){                                         
+  const START_YEAR = 2011;                           /*  rok zalozenia */
+  const years      = new Date().getFullYear() - START_YEAR; 
+  document.getElementById('years').textContent = years;     
+})();

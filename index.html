@@ -60,7 +60,7 @@
 <div class="content-wrapper">
 <div id="hero-wrapper">
 <section class="hero-section" id="hero">
-<nav class="hero-top-nav">
+<nav class="hero-top-nav  nav-inline-mobile">
 <a href="#" onclick="showSection('reference')">Reference</a>
 <a href="#" onclick="showSection('kontakty')">Kontakty</a>
 <a href="#" onclick="showSection('galerie')">Galerie</a>
@@ -78,7 +78,7 @@
 </ul>
 </div>
 <div class="hero-center">
-<img alt="BEST5 logo" class="hero-logo" src="resources/Best5.png"/>
+<img alt="BEST5 logo" class="hero-logo mobile-hide" src="resources/Best5.png"/>
 <p class="hero-text">
         Nabízíme komplexní technické<br/>
         a úklidové služby pro domácnosti i firmy<br/>
@@ -87,7 +87,7 @@
 <a class="scroll-button" href="#default-sections">↓</a>
 </div>
 </section>
-<header>
+<header class="mobile-hide">
 <div class="logo" onclick="showDefault()" style="cursor: pointer;">
 <img alt="BEST5" src="resources/Best5.png"/>
 </div>
@@ -101,6 +101,25 @@
 <a href="#" onclick="showSection('onas')">O nás</a>
 </nav>
 </header>
+
+ <!-- Statistiky -->
+<div id="stats-wrapper">
+<section id="stats" class="stats-section">       
+  <div class="stat-box">                         
+    <span id="years"      class="stat-number">0</span> 
+    <p>let&nbsp;zkušeností</p>                   
+  </div>                                         
+  <div class="stat-box">                         
+    <span id="customers"  class="stat-number">500+</span> 
+    <p>spokojených&nbsp;zákazníků</p>            
+  </div>                                         
+  <div class="stat-box">                         
+    <span id="contracts" class="stat-number">1200+</span> 
+    <p>uzavřených&nbsp;smluv</p>                 
+  </div>                                         
+</section>
+</div>
+
 <!-- Obsah -->
 <main>
 <!-- Predvolený obsah: úvod a služby -->
@@ -125,6 +144,12 @@
           <img src="resources/Photos/instalaterskeSluzby2.jpg" alt="2">
           <img src="resources/Photos/instalaterskeSluzby3.jpg" alt="3">
           <img src="resources/Photos/instalaterskeSluzby4.jpg" alt="4">
+          <img src="resources/Photos/instalaterskeSluzby5.jpg" alt="5">
+          <img src="resources/Photos/instalaterskeSluzby6.jpg" alt="6">
+          <img src="resources/Photos/instalaterskeSluzby7.jpg" alt="7">
+          <img src="resources/Photos/instalaterskeSluzby8.jpg" alt="8">
+          <img src="resources/Photos/instalaterskeSluzby9.jpg" alt="9">
+          <img src="resources/Photos/instalaterskeSluzby10.jpg" alt="10">
         </div>
         <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
         <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
@@ -149,6 +174,13 @@
           <img src="resources/Photos/topeni1.jpg" alt="1">
           <img src="resources/Photos/topeni2.jpg" alt="2">
           <img src="resources/Photos/topeni3.jpg" alt="3">
+          <img src="resources/Photos/topeni4.jpg" alt="4">
+          <img src="resources/Photos/topeni5.jpg" alt="5">
+          <img src="resources/Photos/topeni6.jpg" alt="6">
+          <img src="resources/Photos/topeni7.jpg" alt="7">
+          <img src="resources/Photos/topeni8.jpg" alt="8">
+          <img src="resources/Photos/topeni9.jpg" alt="9">
+          <img src="resources/Photos/topeni10.JPG" alt="10">
         </div>
         <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
         <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
@@ -254,7 +286,25 @@
       </div>
     </div>
   </section>
-</div>
+
+
+ <!-- EU podpora sekcia -->
+  <section class="section" id="eu-podpora" style="margin-bottom: 80px;">
+    <div style="max-width: 960px; margin: 0 auto; text-align: center;">
+      <h2>Projekt FVE 32,4 kWp</h2>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Společnost <strong>BESTFIVE s.r.o.</strong> realizuje projekt <strong>FVE 32,4 kWp BESTFIVE s.r.o.</strong><br>
+        reg. číslo: <strong>CZ.31.3.0/0.0/0.0/22_001/0003391</strong>, jehož cílem je instalace fotovoltaické elektrárny (včetně akumulace), sloužící pro vlastní spotřebu žadatele.<br>
+        Za pomoci využití obnovitelných zdrojů dojde k optimalizaci zajištění elektrické energie pro podnikatelskou činnost.<br>
+        Na tento projekt je poskytována finanční podpora z fondů EU prostřednictvím Národního plánu obnovy.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px;">
+        <img src="resources/Photos/EU.avif" alt="Logo EU" style="max-height: 100px; height: auto;">
+        <img src="resources/Photos/NPO.avif" alt="Logo Národní plán obnovy" style="max-height: 100px; height: auto;">
+      </div>
+    </div>
+  </section>
+  </div>
 
 <!-- Skryté sekcie -->
 <div id="page-sections">
