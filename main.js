@@ -58,140 +58,65 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('years').textContent = years;     
 })();
 
-function showSection(id) {
-  // Hide default section
-  const defaultSection = document.getElementById("default-sections");
-  if (defaultSection) defaultSection.style.display = "none";
 
-  // Hide all other sections
-  document.querySelectorAll("#page-sections section").forEach(sec => {
+function showSection(sectionId) {
+  currentSection = sectionId;
+
+  // Skry default sekcie
+  document.getElementById("default-sections").style.display = "none";
+
+  // Skry všetky hidden-sections
+  document.querySelectorAll("#page-sections .hidden-section").forEach((sec) => {
     sec.classList.add("hidden");
+    sec.style.display = "none"; // pridáme istotu
   });
 
-  // Show selected section
-  const sectionToShow = document.getElementById(id);
-  if (sectionToShow) {
-    sectionToShow.classList.remove("hidden");
-    window.scrollTo({
-      top: sectionToShow.offsetTop - 80,
-      behavior: 'smooth'
-    });
+  // Zobraz požadovanú sekciu
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.classList.remove("hidden");
+    section.style.display = "block"; // pridáme istotu
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Update tracking variable
-  currentSection = id;
-}
-
-
-function showSection(id) {
-  // Hide default content
-  const defaultSection = document.getElementById("default-sections");
-  if (defaultSection) defaultSection.style.display = "none";
-
-  // Hide hero + stats
-  const heroWrapper = document.getElementById("hero-wrapper");
-  const statsWrapper = document.getElementById("stats-wrapper");
-  if (heroWrapper) heroWrapper.style.display = "none";
-  if (statsWrapper) statsWrapper.style.display = "none";
-
-  // Hide all hidden sections
-  document.querySelectorAll("#page-sections section").forEach(sec => {
-    sec.classList.add("hidden");
-  });
-
-  // Show selected section
-  const sectionToShow = document.getElementById(id);
-  if (sectionToShow) {
-    sectionToShow.classList.remove("hidden");
-    window.scrollTo({
-      top: sectionToShow.offsetTop - 60,
-      behavior: 'smooth'
-    });
-  }
-
-  currentSection = id;
-}
-
-
-function showSection(id) {
-  // Hide default content
-  const defaultSection = document.getElementById("default-sections");
-  if (defaultSection) defaultSection.style.display = "none";
-
-  // Show hidden section container
-  const pageSections = document.getElementById("page-sections");
-  if (pageSections) pageSections.style.display = "block";
-
-  // Hide hero + stats
-  const heroWrapper = document.getElementById("hero-wrapper");
-  const statsWrapper = document.getElementById("stats-wrapper");
-  if (heroWrapper) heroWrapper.style.display = "none";
-  if (statsWrapper) statsWrapper.style.display = "none";
-
-  // Hide all hidden sections
-  document.querySelectorAll("#page-sections section").forEach(sec => {
-    sec.classList.add("hidden");
-  });
-
-  // Show selected section
-  const sectionToShow = document.getElementById(id);
-  if (sectionToShow) {
-    sectionToShow.classList.remove("hidden");
-    window.scrollTo({
-      top: sectionToShow.offsetTop - 60,
-      behavior: 'smooth'
-    });
-  }
-
-  currentSection = id;
-}
-
-
-function showSection(id) {
-  console.log("Showing section:", id);
-
-  // Hide default section
-  const defaultSection = document.getElementById("default-sections");
-  if (defaultSection) {
-    defaultSection.style.display = "none";
-    console.log("Hid default section");
-  }
-
-  // Show container for hidden sections
-  const pageSections = document.getElementById("page-sections");
-  if (pageSections) {
-    pageSections.style.display = "block";
-    console.log("Displayed #page-sections");
-  }
-
-  // Hide hero and stats
-  const hero = document.getElementById("hero-wrapper");
-  const stats = document.getElementById("stats-wrapper");
+  // Skry hero
+  const hero = document.getElementById("hero");
   if (hero) {
     hero.style.display = "none";
-    console.log("Hid hero");
-  }
-  if (stats) {
-    stats.style.display = "none";
-    console.log("Hid stats");
   }
 
-  // Hide all sections inside #page-sections
-  document.querySelectorAll("#page-sections section").forEach(sec => {
-    sec.classList.add("hidden");
+  const header = document.querySelector("header");
+  header.style.top = "0";
+}
+function showDefault() {
+  // Skry všetky skryté sekcie
+  document.querySelectorAll("#page-sections .hidden-section").forEach(section => {
+    section.classList.add("hidden");
+    section.style.display = "none"; // 👈 toto je dôležité!
   });
-  console.log("Hid all #page-sections children");
 
-  // Show the selected one
-  const toShow = document.getElementById(id);
-  if (toShow) {
-    toShow.classList.remove("hidden");
-    console.log("Revealed section:", id);
-    window.scrollTo({
-      top: toShow.offsetTop - 60,
-      behavior: "smooth"
-    });
+  // Zobraz hero sekciu
+  const hero = document.getElementById("hero");
+  if (hero) {
+    hero.style.display = "block";
   }
 
-  currentSection = id;
+  // Zobraz default sekcie
+  const defaultSections = document.getElementById("default-sections");
+  if (defaultSections) {
+    defaultSections.style.display = "block";
+  }
+
+  // Posuň sa na vrch
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, 10);
+
+  // Skry hlavičku (header)
+  const header = document.querySelector("header");
+  if (header) {
+    header.style.top = "-100px";
+  }
+
+  currentSection = "default";
 }
