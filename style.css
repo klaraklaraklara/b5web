@@ -309,15 +309,15 @@ a:hover {
 
 /*Kontakty*/
 .kontakt-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: stretch; 
+  display: grid;                                               
+  grid-template-columns: minmax(320px, 420px) 1fr;              
+  gap: 48px;                                                   
+  justify-content: center;
+  align-items: stretch;
 }
 
 .kontakt-card {
-  flex: 1;
+  flex: 1 1 420px;
   min-width: 280px;
   background-color: #fff;
   padding: 24px;
@@ -393,18 +393,18 @@ a:hover {
 /* MAPA */
 .map-container {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  height: 320px; 
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .map-container iframe {
   width: 100%;
-  height: 100%;
+  height: 100%; 
+  display: block;
   border: 0;
 }
-
 .back-button {
   margin-top: 40px;
   text-align: center;
@@ -1100,6 +1100,53 @@ img, video {
     bottom: 120px;
     right: 10px;
   }
+
+  /*Kontakty*/
+
+    .kontakt-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px;
+  }
+
+  .kontakt-card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .kontakt-right {
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  .qr-codes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .map-container {
+    width: 100%;
+    min-height: 320px;
+    border-radius: 10px;
+  }
+
+  .kontakt-box {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .map-container {
+    width: 100%;
+    min-height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+
 
   /*Statistiky*/
 
