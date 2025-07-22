@@ -1,29 +1,46 @@
 
 let currentSection = "default";
 let currentImageIndex = 0;
+let currentCategoryImages = [];
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
+  currentCategoryImages = [];
 }
 
 function prevLightbox() {
-  const images = document.querySelectorAll("#galerie .photo-gallery img");
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  openLightbox(currentImageIndex);
+  if (currentCategoryImages.length > 0) {
+    currentImageIndex = (currentImageIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
+    updateLightboxImage();
+  }
 }
 
 function nextLightbox() {
-  const images = document.querySelectorAll("#galerie .photo-gallery img");
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  openLightbox(currentImageIndex);
+  if (currentCategoryImages.length > 0) {
+    currentImageIndex = (currentImageIndex + 1) % currentCategoryImages.length;
+    updateLightboxImage();
+  }
 }
 
-function openLightbox(index) {
-  const images = document.querySelectorAll("#galerie .photo-gallery img");
-  if (images[index]) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = images[index].src;
+function updateLightboxImage() {
+  const lightboxImg = document.getElementById("lightbox-img");
+  if (currentCategoryImages[currentImageIndex]) {
+    lightboxImg.src = currentCategoryImages[currentImageIndex].src;
+  }
+}
+
+function openLightbox(index, images = null) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  if (images) {
+    currentCategoryImages = images;
+  } else {
+    currentCategoryImages = Array.from(document.querySelectorAll("#galerie .photo-gallery img"));
+  }
+
+  if (currentCategoryImages[index]) {
+    lightboxImg.src = currentCategoryImages[index].src;
     lightbox.style.display = "flex";
     currentImageIndex = index;
   }
@@ -70,12 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('click', (e) => {
         if (!e.target.closest('.overlay')) {
           const src = e.target.src;
-          const galleryImages = document.querySelectorAll("#galerie .photo-gallery img");
-          let index = Array.from(galleryImages).findIndex(i => i.src === src);
+          const imageList = Array.from(images);
+          let index = imageList.findIndex(i => i.src === src);
           if (index === -1) index = 0;
-          openLightbox(index);
+          openLightbox(index, imageList);
         }
       });
+    });
+  });
+
+  // Aj obrázky v sekcii #galerie
+  document.querySelectorAll("#galerie .photo-gallery img").forEach((img, index) => {
+    img.addEventListener("click", () => {
+      const allGalleryImages = Array.from(document.querySelectorAll("#galerie .photo-gallery img"));
+      openLightbox(index, allGalleryImages);
     });
   });
 });
@@ -90,52 +115,55 @@ document.addEventListener('DOMContentLoaded', () => {
 function showSection(sectionId) {
   currentSection = sectionId;
   document.getElementById("default-sections").style.display = "none";
+
   document.querySelectorAll("#page-sections .hidden-section").forEach((sec) => {
     sec.classList.add("hidden");
     sec.style.display = "none";
+    document.body.classList.remove("home-view");
   });
+
   const section = document.getElementById(sectionId);
   if (section) {
     section.classList.remove("hidden");
     section.style.display = "block";
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
   const hero = document.getElementById("hero");
-  if (hero) {
-    hero.style.display = "none";
-  }
+  if (hero) hero.style.display = "none";
+
   const header = document.querySelector("header");
-  header.style.top = "0";
+  if (header) {
+    header.classList.remove("hidden-header");
+    header.classList.add("visible-header");
+  }
 }
 
 function showDefault() {
-  // 1) Skry všetky hidden sekcie
   document.querySelectorAll("#page-sections .hidden-section").forEach(sec => {
     sec.classList.add("hidden");
     sec.style.display = "none";
   });
 
-  // 2) Zobraz hero + default-sections
   const hero = document.getElementById("hero");
   if (hero) hero.style.display = "block";
 
   const def = document.getElementById("default-sections");
   if (def) def.style.display = "block";
 
-  // 3) Nechaj prebehnúť repaint a potom skrolni na vrch hero-wrapper
   setTimeout(() => {
     const topEl = document.getElementById("hero-wrapper");
     if (topEl && topEl.scrollIntoView) {
       topEl.scrollIntoView({ behavior: "auto", block: "start" });
     } else {
-      // fallback
       window.scrollTo(0, 0);
     }
   }, 20);
 
-  // 4) Skry hlavičku
   const header = document.querySelector("header");
-  if (header) header.style.top = "-100px";
-
+  if (header) {
+    header.classList.remove("visible-header");
+    header.classList.add("hidden-header");
+  }
   currentSection = "default";
 }

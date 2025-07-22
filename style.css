@@ -32,10 +32,23 @@ header {
   padding: 10px 30px;
   background-color: #b5a391; 
   border-bottom: 1px solid #2b2a29;
-  position: sticky;
+  position: fixed;              
+  top: -100px;                  
+  width: 100%;
+  z-index: 9999;                
+  transition: top 0.3s ease-in-out;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+header.hidden-header {
+  top: -300px;
+}
+
+header.visible-header {
   top: 0;
-  z-index: 100;
-  gap: 10px;
 }
 
 .logo img {
@@ -308,13 +321,7 @@ a:hover {
 
 
 /*Kontakty*/
-.kontakt-flex {
-  display: grid;                                               
-  grid-template-columns: minmax(320px, 420px) 1fr;              
-  gap: 48px;                                                   
-  justify-content: center;
-  align-items: stretch;
-}
+
 
 .kontakt-card {
   flex: 1 1 420px;
@@ -391,13 +398,7 @@ a:hover {
 }
 
 /* MAPA */
-.map-container {
-  width: 100%;
-  height: 320px; 
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+
 
 .map-container iframe {
   width: 100%;
@@ -517,19 +518,6 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  transition: top 0.3s ease-in-out;
-  top: -100px;
-  position: fixed;
-  width: 100%;
-  background-color: #b5a391;
-  z-index: 1000;
-}
-
-header {
-  z-index: 9999;
-}
-
 .footer-bar {
   background-color: #111;
   color: white;
@@ -573,13 +561,6 @@ footer.footer-bar {
   width: 100%;
 }
 
-header {
-  flex-wrap: wrap;
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
 html, body {
   height: 100%;
   margin: 0;
@@ -602,7 +583,6 @@ footer.footer-bar {
   bottom: 0;
   width: 100%;
 }
-
 
 html, body {
   height: 100%;
@@ -636,7 +616,6 @@ footer.footer-bar {
   text-align: center;
 }
 
-
 .content-wrapper {
   min-height: 100vh;
   display: flex;
@@ -657,66 +636,6 @@ main {
   margin-top: 80px;
 }
 
-
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero-menu-container.left {
-    position: static;
-    margin-top: 20px;
-  }
-
-  .hero-top-nav {
-    position: static;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .hero-logo {
-    max-width: 180px;
-  }
-
-  .hero-text {
-    font-size: 18px;
-  }
-
-  .slider-track img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 8px;
-  border-radius: 0;
-    height: 180px;
-  }
-
-  .sluzby-flex {
-  gap: 30px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 30px;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .kontakt-flex {
-    flex-direction: column;
-  }
-
-  .kontakt-box {
-    margin-top: 10px;
-  }
-}
 
 /*Reference*/
 
@@ -796,20 +715,6 @@ main {
 .social-icon.instagram { background-color: #c56282; }
 .social-icon.tiktok { background-color: #a16e6e; }
 
-@media screen and (max-width: 768px) {
-  .social-bar {
-    top: auto;
-    bottom: 100px;
-    right: 10px;
-    transform: none;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-}
 
 .social-icon img {
   width: 100%;
@@ -921,25 +826,119 @@ img, video {
   margin-bottom:6px;              
 }                                 
 
-/* mobil ≤ 768 px – šírka pod seba */      /* 🆕 */
-@media(max-width:768px){          /* 🆕 */
-  .stats-section{flex-direction:column;} /* 🆕 */
+.hidden-section {
+  padding: 40px 30px;
+  margin: 30px auto;
+  max-width: 1200px;
 }
 
-/*pre telefony*/
 
-@media (max-width: 480px) {
-  .hero-section {
-    background-position: 70% center;
+/* Telefony */     
+@media(max-width:768px){
+  .stats-section{
+    flex-direction:column;
+  } 
+  /*header vsade okrem hlavnej stranky*/
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 12px 10px;
   }
-}
 
-@media (max-width: 768px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .kontakt-box {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 14px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+  }
+/*
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }*/
+/*header na hlavnej stranke*/
+
+  .hero-menu-container.left {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .hero-top-nav {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-logo {
+    max-width: 180px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .slider-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    border-radius: 0;
+    height: 180px;
+  }
+
+  .sluzby-flex {
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+ .social-bar {
+    top: auto;
+    bottom: 100px;
+    right: 10px;
+    transform: none;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
   .slider-container {
     max-width: 240px;
     aspect-ratio: 1 / 1;
   }
- .mobile-hide {
+
+  .mobile-hide {
     display: none !important;
   }
 
@@ -963,13 +962,6 @@ img, video {
     color: white;
     font-weight: 600;
     white-space: nowrap;
-  }
-
-  header {
-    position: relative;
-    padding: 10px 15px;
-    flex-direction: column;
-    text-align: c6enter;
   }
 
   .hero-section {
@@ -1019,9 +1011,9 @@ img, video {
     max-width: 140px;
   }
 
- .hero-menu {
-  padding: 0;
-  margin: 0;
+  .hero-menu {
+    padding: 0;
+    margin: 0;
   }
 
   .hero-menu a {
@@ -1032,10 +1024,10 @@ img, video {
     filter: invert(1);
   }
   .hero-menu li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 
   .hero-menu-title {
@@ -1055,14 +1047,18 @@ img, video {
   }
 
   #onas, #reference, #galerie, #kontakty {
-    padding-top: 100px;
+    padding-top: 200px;
+  }
+
+  #default-sections {
+    padding-top: 60px; /* alebo aj 0, ak to stačí */
   }
 
   .sluzby-flex {
-  gap: 30px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1071,11 +1067,11 @@ img, video {
   }
 
   .slider-track img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 8px;
-  border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    border-radius: 0;
     height: auto;
     max-height: 300px;
   }
@@ -1103,12 +1099,7 @@ img, video {
 
   /*Kontakty*/
 
-    .kontakt-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 0 16px;
-  }
+  
 
   .kontakt-card {
     width: 100%;
@@ -1116,21 +1107,14 @@ img, video {
     box-sizing: border-box;
   }
 
+  .kontakt-box {
+    margin-top: 10px;
+  }
+
+
   .kontakt-right {
     width: 100%;
     padding: 0 4px;
-  }
-
-  .qr-codes {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .map-container {
-    width: 100%;
-    min-height: 320px;
-    border-radius: 10px;
   }
 
   .kontakt-box {
@@ -1138,25 +1122,85 @@ img, video {
     text-align: center;
   }
 
-  .map-container {
-    width: 100%;
-    min-height: 320px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  .qr-codes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
+  
 
+  
 
   /*Statistiky*/
 
-  .stats-section{flex-direction:column;}
+  .stats-section{flex-direction:column;}   
+ 
 
 }
 
 
-.hidden-section {
-  padding: 40px 30px;
-  margin: 30px auto;
-  max-width: 1200px;
+@media (max-width: 480px) {
+  .hero-section {
+    background-position: 70% center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  
+
+  .kontakt-card,
+  .kontakt-right {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  
+}
+
+
+.kontakt-flex {
+  display: grid;
+  grid-template-columns: minmax(380px, 520px) 1fr;
+  gap: 60px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 768px) {
+  .kontakt-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .kontakt-card,
+  .kontakt-right {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .map-container {
+    width: 100%;
+    min-height: 320px;
+  }
 }
