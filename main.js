@@ -109,24 +109,33 @@ function showSection(sectionId) {
 }
 
 function showDefault() {
-  document.querySelectorAll("#page-sections .hidden-section").forEach(section => {
-    section.classList.add("hidden");
-    section.style.display = "none";
+  // 1) Skry všetky hidden sekcie
+  document.querySelectorAll("#page-sections .hidden-section").forEach(sec => {
+    sec.classList.add("hidden");
+    sec.style.display = "none";
   });
+
+  // 2) Zobraz hero + default-sections
   const hero = document.getElementById("hero");
-  if (hero) {
-    hero.style.display = "block";
-  }
-  const defaultSections = document.getElementById("default-sections");
-  if (defaultSections) {
-    defaultSections.style.display = "block";
-  }
+  if (hero) hero.style.display = "block";
+
+  const def = document.getElementById("default-sections");
+  if (def) def.style.display = "block";
+
+  // 3) Nechaj prebehnúť repaint a potom skrolni na vrch hero-wrapper
   setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, 10);
+    const topEl = document.getElementById("hero-wrapper");
+    if (topEl && topEl.scrollIntoView) {
+      topEl.scrollIntoView({ behavior: "auto", block: "start" });
+    } else {
+      // fallback
+      window.scrollTo(0, 0);
+    }
+  }, 20);
+
+  // 4) Skry hlavičku
   const header = document.querySelector("header");
-  if (header) {
-    header.style.top = "-100px";
-  }
+  if (header) header.style.top = "-100px";
+
   currentSection = "default";
 }
