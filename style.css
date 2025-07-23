@@ -202,7 +202,7 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 30px;
-   display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
@@ -230,7 +230,7 @@ a:hover {
 .slider-container {
   width: 100%;
   max-width: 300px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
@@ -244,6 +244,7 @@ a:hover {
   max-width: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: transparent;
 }
 
 .slider-track {
@@ -251,17 +252,15 @@ a:hover {
   transition: transform 0.5s ease;
 }
 
+
 .slider-track img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 8px;
-  border-radius: 0;
-  width: 100%;
-  flex-shrink: 0;
   object-fit: cover;
   border-radius: 8px;
-  cursor: pointer;
+  display: block;
+  background-color: #ccc;
+  padding: 0;
 }
 
 .slider-button {
@@ -902,23 +901,15 @@ img, video {
     font-size: 18px;
   }
 
-  .slider-track img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 8px;
-    border-radius: 0;
-    height: 180px;
-  }
-
-  .sluzby-flex {
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 30px;
-    flex-direction: column;
-    gap: 40px;
-  }
+.sluzby-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;         
+  justify-content: center;
+  gap: 32px;                 
+  padding: 0 16px;             
+  margin-bottom: 40px;       
+}
 
  .social-bar {
     top: auto;
@@ -933,10 +924,26 @@ img, video {
     font-size: 20px;
   }
 
+
   .slider-container {
-    max-width: 240px;
-    aspect-ratio: 1 / 1;
-  }
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+.slider-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  background-color: #ccc;
+  padding: 0;
+}
 
   .mobile-hide {
     display: none !important;
@@ -1053,29 +1060,6 @@ img, video {
   #default-sections {
     padding-top: 60px; /* alebo aj 0, ak to stačí */
   }
-
-  .sluzby-flex {
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-left: 0;
-    align-items: center;
-  }
-
-  .slider-track img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 8px;
-    border-radius: 0;
-    height: auto;
-    max-height: 300px;
-  }
-
   .hero-text {
     font-size: 18px;
     line-height: 1.4;
