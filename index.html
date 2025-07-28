@@ -60,7 +60,7 @@
 <div class="content-wrapper">
 <div id="hero-wrapper">
 <section class="hero-section" id="hero">
-<nav class="hero-top-nav  nav-inline-mobile">
+<nav class="hero-top-nav nav-inline-mobile">
 <a href="#" onclick="showSection('reference')">Reference</a>
 <a href="#" onclick="showSection('kontakty')">Kontakty</a>
 <a href="#" onclick="showSection('galerie')">Galerie</a>
@@ -92,8 +92,6 @@
 <img alt="BEST5" src="resources/Best5.png"/>
 </div>
 <div class="kontakt-box">📞 +420 725 102 447</div>
-
-
 <nav>
 <a href="#" onclick="showSection('reference')">Reference</a>
 <a href="#" onclick="showSection('kontakty')">Kontakty</a>
@@ -101,359 +99,340 @@
 <a href="#" onclick="showSection('onas')">O nás</a>
 </nav>
 </header>
-
-
 <!-- Obsah -->
 <main>
 <!-- Predvolený obsah: úvod a služby -->
 <div id="default-sections">
-
- <!-- Statistiky -->
+<!-- Statistiky -->
 <div id="stats-wrapper">
-<section id="stats" class="stats-section">       
-  <div class="stat-box">                         
-    <span id="years"      class="stat-number">0</span> 
-    <p>let&nbsp;zkušeností</p>                   
-  </div>                                         
-  <div class="stat-box">                         
-    <span id="customers"  class="stat-number">500+</span> 
-    <p>spokojených&nbsp;zákazníků</p>            
-  </div>                                         
-  <div class="stat-box">                         
-    <span id="contracts" class="stat-number">1200+</span> 
-    <p>uzavřených&nbsp;smluv</p>                 
-  </div>                                         
+<section class="stats-section" id="stats">
+<div class="stat-box">
+<span class="stat-number" id="years">0</span>
+<p>let zkušeností</p>
+</div>
+<div class="stat-box">
+<span class="stat-number" id="customers">500+</span>
+<p>spokojených zákazníků</p>
+</div>
+<div class="stat-box">
+<span class="stat-number" id="contracts">1200+</span>
+<p>uzavřených smluv</p>
+</div>
 </section>
 </div>
-
 <!-- Sekcie služieb -->
- <section class="section" id="instalaterskeSluzby">
-    <h2>Instalatérské služby</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Montáže a opravy, vodoinstalace odpadů</li>
-        <li>Montáže a dodávky zařizovacích předmětů</li>
-        <li>Montáže ohřívačů vody</li>
-        <li>Dezinfekce potrubí dle ČSN</li>
-        <li>Strojní čištění odpadů</li>
-        <li>Kamerové prohlídky</li>
-        <li>Požární rozvody a hydranty</li>
-        <li>Praxe a zkušenosti více než 30 let</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="instalaterskeSluzby" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/instalaterskeSluzby1.jpg" alt="1">
-          <img src="resources/Photos/instalaterskeSluzby2.jpg" alt="2">
-          <img src="resources/Photos/instalaterskeSluzby3.jpg" alt="3">
-          <img src="resources/Photos/instalaterskeSluzby4.jpg" alt="4">
-          <img src="resources/Photos/instalaterskeSluzby5.jpg" alt="5">
-          <img src="resources/Photos/instalaterskeSluzby6.jpg" alt="6">
-          <img src="resources/Photos/instalaterskeSluzby7.jpg" alt="7">
-          <img src="resources/Photos/instalaterskeSluzby8.jpg" alt="8">
-          <img src="resources/Photos/instalaterskeSluzby9.jpg" alt="9">
-          <img src="resources/Photos/instalaterskeSluzby10.jpg" alt="10">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="topenarskeSluzby">
-    <h2>Topenářské služby</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Montáže ústředního topení v materiálech CU, plast a uhlíková ocel</li>
-        <li>Montáže radiátorů a topných žebříků, termostatických ventilů a hlavic</li>
-        <li>Dodávka a montáž kotlů, ohřívačů a tepelných čerpadel</li>
-        <li>Plnění a vypouštění otopných soustav – Rems</li>
-        <li>Čištění a ošetření otopných systémů robotem</li>
-        <li>Rems – úspora nákladů vytápění až 15 %</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="topeni" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/topeni1.jpg" alt="1">
-          <img src="resources/Photos/topeni2.jpg" alt="2">
-          <img src="resources/Photos/topeni3.jpg" alt="3">
-          <img src="resources/Photos/topeni4.jpg" alt="4">
-          <img src="resources/Photos/topeni5.jpg" alt="5">
-          <img src="resources/Photos/topeni6.jpg" alt="6">
-          <img src="resources/Photos/topeni7.jpg" alt="7">
-          <img src="resources/Photos/topeni8.jpg" alt="8">
-          <img src="resources/Photos/topeni9.jpg" alt="9">
-          <img src="resources/Photos/topeni10.JPG" alt="10">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="stehovani">
-    <h2>Stěhování těžkých předmětů</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Stěhování předmětu o hmotnosti až do 0,5t po schodech</li>
-        <li>Např.: teplovodní kotle, ohřívače vody, lednice, skříně, trezory apod.</li>
-        <li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="stehovani" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/stehovani1.jpg" alt="1">
-          <img src="resources/Photos/stehovani2.jpg" alt="2">
-          <img src="resources/Photos/stehovani3.jpg" alt="3">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="odtahy">
-    <h2>Odtahové služby</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Odtahy osobních i užitkových vozidel do 3,5 t</li>
-        <li>Asistenční služba při poruchách a nehodách</li>
-        <li>Odtah z garáží, parkovišť a těžko přístupných míst</li>
-        <li>Možnost přepravy strojů a menší techniky</li>
-        <li>Vlastní odtahový speciál s navijákem a nájezdovou rampou</li>
-        <li>Rychlý výjezd a profesionální přístup</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="odtah" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/odtah1.jpg" alt="1">
-          <img src="resources/Photos/odtah2.jpg" alt="2">
-          <img src="resources/Photos/odtah3.jpg" alt="3">
-          <img src="resources/Photos/odtah4.jpg" alt="4">
-          <img src="resources/Photos/odtah5.jpg" alt="5">
-          <img src="resources/Photos/odtah6.jpg" alt="6">
-          <img src="resources/Photos/odtah7.jpg" alt="7">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="tepovani">
-    <h2>Tepování</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Odstranění hloubkových nečistot</li>
-        <li>Použití nejefektivnější techniky na trhu</li>
-        <li>Horkovodní extrakční technologie pro maximální účinnost čištění</li>
-        <li>Obnovíme svěžest a barvy</li>
-        <li>Vysušení vyčištěného povrchu</li>
-        <li>Výkonný sací motor – minimum vlhkosti</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="tepovani" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/tepovani1.jpg" alt="1">
-          <img src="resources/Photos/tepovani2.jpg" alt="2">
-          <img src="resources/Photos/tepovani3.jpg" alt="3">
-          <img src="resources/Photos/tepovani4.jpg" alt="4">
-          <img src="resources/Photos/tepovani5.jpg" alt="5">
-          <img src="resources/Photos/tepovani6.jpg" alt="6">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="dezinfekce">
-    <h2>Dezinfekce ozonem</h2>
-    <div class="sluzby-flex">
-      <ul>
-        <li>Nejúčinnější metoda dezinfekce</li>
-        <li>Rychlý proces</li>
-        <li>Eliminace pachu z kouře, plísní, potu či zvířat</li>
-        <li>Ideální pro alergiky a astmatiky</li>
-        <li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
-        <li>Odstraňuje i skryté plísně a nečistoty</li>
-      </ul>
-      <div class="slider-container img-wrapper" data-category="dezinfekce" data-index="0">
-        <div class="slider-track">
-          <img src="resources/Photos/dezinfekce1.jpg" alt="1">
-        </div>
-        <button class="slider-button prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <button class="slider-button next" onclick="moveSlide(this, 1)">&#10095;</button>
-        <div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
-      </div>
-    </div>
-  </section>
-
-
- <!-- EU podpora sekcia -->
-  <section class="section" id="eu-podpora" style="margin-bottom: 80px;">
-    <div style="max-width: 960px; margin: 0 auto; text-align: center;">
-      <h2>Projekt FVE 32,4 kWp</h2>
-      <p style="font-size: 16px; line-height: 1.6;">
-        Společnost <strong>BESTFIVE s.r.o.</strong> realizuje projekt <strong>FVE 32,4 kWp BESTFIVE s.r.o.</strong><br>
-        reg. číslo: <strong>CZ.31.3.0/0.0/0.0/22_001/0003391</strong>, jehož cílem je instalace fotovoltaické elektrárny (včetně akumulace), sloužící pro vlastní spotřebu žadatele.<br>
-        Za pomoci využití obnovitelných zdrojů dojde k optimalizaci zajištění elektrické energie pro podnikatelskou činnost.<br>
+<section class="section" id="instalaterskeSluzby">
+<h2>Instalatérské služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Montáže a opravy, vodoinstalace odpadů</li>
+<li>Montáže a dodávky zařizovacích předmětů</li>
+<li>Montáže ohřívačů vody</li>
+<li>Dezinfekce potrubí dle ČSN</li>
+<li>Strojní čištění odpadů</li>
+<li>Kamerové prohlídky</li>
+<li>Požární rozvody a hydranty</li>
+<li>Praxe a zkušenosti více než 30 let</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="instalaterskeSluzby" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/instalaterskeSluzby1.jpg"/>
+<img alt="2" src="resources/Photos/instalaterskeSluzby2.jpg"/>
+<img alt="3" src="resources/Photos/instalaterskeSluzby3.jpg"/>
+<img alt="4" src="resources/Photos/instalaterskeSluzby4.jpg"/>
+<img alt="5" src="resources/Photos/instalaterskeSluzby5.jpg"/>
+<img alt="6" src="resources/Photos/instalaterskeSluzby6.jpg"/>
+<img alt="7" src="resources/Photos/instalaterskeSluzby7.jpg"/>
+<img alt="8" src="resources/Photos/instalaterskeSluzby8.jpg"/>
+<img alt="9" src="resources/Photos/instalaterskeSluzby9.jpg"/>
+<img alt="10" src="resources/Photos/instalaterskeSluzby10.jpg"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<section class="section" id="topenarskeSluzby">
+<h2>Topenářské služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Montáže ústředního topení v materiálech CU, plast a uhlíková ocel</li>
+<li>Montáže radiátorů a topných žebříků, termostatických ventilů a hlavic</li>
+<li>Dodávka a montáž kotlů, ohřívačů a tepelných čerpadel</li>
+<li>Plnění a vypouštění otopných soustav – Rems</li>
+<li>Čištění a ošetření otopných systémů robotem</li>
+<li>Rems – úspora nákladů vytápění až 15 %</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="topeni" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/topeni1.jpg"/>
+<img alt="2" src="resources/Photos/topeni2.jpg"/>
+<img alt="3" src="resources/Photos/topeni3.jpg"/>
+<img alt="4" src="resources/Photos/topeni4.jpg"/>
+<img alt="5" src="resources/Photos/topeni5.jpg"/>
+<img alt="6" src="resources/Photos/topeni6.jpg"/>
+<img alt="7" src="resources/Photos/topeni7.jpg"/>
+<img alt="8" src="resources/Photos/topeni8.jpg"/>
+<img alt="9" src="resources/Photos/topeni9.jpg"/>
+<img alt="10" src="resources/Photos/topeni10.JPG"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<section class="section" id="stehovani">
+<h2>Stěhování těžkých předmětů</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Stěhování předmětu o hmotnosti až do 0,5t po schodech</li>
+<li>Napr. teplovodní kotle, ohřívače vody, lednice, skříně, trezory a pod.</li>
+<li>Transport pomocí nejnovějšího typu schodišťového robotu CT52S</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="stehovani" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/stehovani1.jpg"/>
+<img alt="2" src="resources/Photos/stehovani2.jpg"/>
+<img alt="3" src="resources/Photos/stehovani3.jpg"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<section class="section" id="odtahy">
+<h2>Odtahové služby</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Odtahy osobních i užitkových vozidel do 3,5 t</li>
+<li>Asistenční služba při poruchách a nehodách</li>
+<li>Odtah z garáží, parkovišť a těžko přístupných míst</li>
+<li>Možnost přepravy strojů a menší techniky</li>
+<li>Vlastní odtahový speciál s navijákem a nájezdovou rampou</li>
+<li>Rychlý výjezd a profesionální přístup</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="odtah" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/odtah1.jpg"/>
+<img alt="2" src="resources/Photos/odtah2.jpg"/>
+<img alt="3" src="resources/Photos/odtah3.jpg"/>
+<img alt="4" src="resources/Photos/odtah4.jpg"/>
+<img alt="5" src="resources/Photos/odtah5.jpg"/>
+<img alt="6" src="resources/Photos/odtah6.jpg"/>
+<img alt="7" src="resources/Photos/odtah7.jpg"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<section class="section" id="tepovani">
+<h2>Tepování</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Odstranění hloubkových nečistot</li>
+<li>Použití nejefektivnější techniky na trhu</li>
+<li>Horkovodní extrakční technologie pro maximální účinnost čištění</li>
+<li>Obnovíme svěžest a barvy</li>
+<li>Vysušení vyčištěného povrchu</li>
+<li>Výkonný sací motor – minimum vlhkosti</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="tepovani" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/tepovani1.jpg"/>
+<img alt="2" src="resources/Photos/tepovani2.jpg"/>
+<img alt="3" src="resources/Photos/tepovani3.jpg"/>
+<img alt="4" src="resources/Photos/tepovani4.jpg"/>
+<img alt="5" src="resources/Photos/tepovani5.jpg"/>
+<img alt="6" src="resources/Photos/tepovani6.jpg"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<section class="section" id="dezinfekce">
+<h2>Dezinfekce ozonem</h2>
+<div class="sluzby-flex">
+<ul>
+<li>Nejúčinnější metoda dezinfekce</li>
+<li>Rychlý proces</li>
+<li>Eliminace pachu z kouře, plísní, potu či zvířat</li>
+<li>Ideální pro alergiky a astmatiky</li>
+<li>Dezinfekce úřadů, domácností, fitness center, škol, automobilů apod.</li>
+<li>Odstraňuje i skryté plísně a nečistoty</li>
+</ul>
+<div class="slider-container img-wrapper" data-category="dezinfekce" data-index="0">
+<div class="slider-track">
+<img alt="1" src="resources/Photos/dezinfekce1.jpg"/>
+</div>
+<button class="slider-button prev" onclick="moveSlide(this, -1)">❮</button>
+<button class="slider-button next" onclick="moveSlide(this, 1)">❯</button>
+<div class="overlay" onclick="showSection('galerie')">Projít do galerie</div>
+</div>
+</div>
+</section>
+<!-- EU podpora sekcia -->
+<section class="section" id="eu-podpora" style="margin-bottom: 80px;">
+<div style="max-width: 960px; margin: 0 auto; text-align: center;">
+<h2>Projekt FVE 32,4 kWp</h2>
+<p style="font-size: 16px; line-height: 1.6;">
+        Společnost <strong>BESTFIVE s.r.o.</strong> realizuje projekt <strong>FVE 32,4 kWp BESTFIVE s.r.o.</strong><br/>
+        reg. číslo: <strong>CZ.31.3.0/0.0/0.0/22_001/0003391</strong>, jehož cílem je instalace fotovoltaické elektrárny (včetně akumulace), sloužící pro vlastní spotřebu žadatele.<br/>
+        Za pomoci využití obnovitelných zdrojů dojde k optimalizaci zajištění elektrické energie pro podnikatelskou činnost.<br/>
         Na tento projekt je poskytována finanční podpora z fondů EU prostřednictvím Národního plánu obnovy.
       </p>
-      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px;">
-        <img src="resources/Photos/EU.avif" alt="Logo EU" style="max-height: 100px; height: auto;">
-        <img src="resources/Photos/NPO.avif" alt="Logo Národní plán obnovy" style="max-height: 100px; height: auto;">
-      </div>
-    </div>
-  </section>
-  </div>
-
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px;">
+<img alt="Logo EU" src="resources/Photos/EU.avif" style="max-height: 100px; height: auto;"/>
+<img alt="Logo Národní plán obnovy" src="resources/Photos/NPO.avif" style="max-height: 100px; height: auto;"/>
+</div>
+</div>
+</section>
+</div>
 <!-- Skryté sekcie -->
 <div id="page-sections">
 <section class="hidden-section hidden" id="reference">
-<h2>Reference</h2>
+
 <div class="photo-gallery">
 <div class="photo-box">
-<img alt="obrazok1" src="resources/Photos/reference1.jpg"/>
+<img alt="obrazok1" src="resources/Photos/reference1.jpg">
 <div class="photo-description">
 <p class="title">Generální oprava zděné brány s vraty</p>
 <p class="location">Univerzita obrany, Brno</p>
 </div>
-</div>
+</img></div>
 <div class="photo-box">
-<img alt="obrazok2" src="resources/Photos/reference2.jpg"/>
+<img alt="obrazok2" src="resources/Photos/reference2.jpg">
 <div class="photo-description">
 <p class="title">Nájezdní rampa spediční společnosti</p>
 <p class="location">Ulice Na Hranici, Jihlava</p>
 </div>
-</div>
+</img></div>
 <div class="photo-box">
-<img alt="obrazok3" src="resources/Photos/reference3.jpg"/>
+<img alt="obrazok3" src="resources/Photos/reference3.jpg">
 <div class="photo-description">
 <p class="title">Oprava interiéru zámecké kaple</p>
 <p class="location">Státní zámek Stekník, okres Louny</p>
 </div>
-</div>
+</img></div>
 <div class="photo-box">
-<img alt="obrazok4" src="resources/Photos/reference4.jpg"/>
+<img alt="obrazok4" src="resources/Photos/reference4.jpg">
 <div class="photo-description">
 <p class="title">Oprava technologie</p>
 <p class="location">Státní zámek Kynžvart, okres Cheb</p>
 </div>
-</div>
+</img></div>
 <div class="photo-box">
-<img alt="obrazok5" src="resources/Photos/reference5.jpg"/>
+<img alt="obrazok5" src="resources/Photos/reference5.jpg">
 <div class="photo-description">
 <p class="title">Výstavba sportovního hřiště</p>
 <p class="location">Univerzita obrany, Brno</p>
 </div>
-</div>
+</img></div>
 <div class="photo-box">
-<img alt="obrazok6" src="resources/Photos/reference6.jpg"/>
+<img alt="obrazok6" src="resources/Photos/reference6.jpg">
 <div class="photo-description">
 <p class="title">Anglické dvorky</p>
 <p class="location">Areál Dukla, Praha</p>
 </div>
-</div>
+</img></div>
 </div>
 <div class="back-button" style="margin-top: 30px;">
 <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
 </div>
 </section>
 <section class="hidden-section hidden" id="galerie">
-  <h2>Galerie</h2>
 
-  <div class="gallery-category">
-    <h3>Instalatérské služby</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(0)" src="resources/Photos/instalaterskeSluzby1.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(1)" src="resources/Photos/instalaterskeSluzby2.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(2)" src="resources/Photos/instalaterskeSluzby3.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(3)" src="resources/Photos/instalaterskeSluzby4.jpg"/>
-    </div>
-  </div>
-
-  <div class="gallery-category">
-    <h3>Topenářské služby</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(4)" src="resources/Photos/topeni1.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(5)" src="resources/Photos/topeni2.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(6)" src="resources/Photos/topeni3.jpg"/>
-    </div>
-  </div>
-
-  <div class="gallery-category">
-    <h3>Stěhování těžkých předmětů</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(7)" src="resources/Photos/stehovani1.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(8)" src="resources/Photos/stehovani2.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(9)" src="resources/Photos/stehovani3.jpg"/>
-    </div>
-  </div>
-
-  <div class="gallery-category">
-    <h3>Odtahové služby</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(10)" src="resources/Photos/odtah1.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(11)" src="resources/Photos/odtah2.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(12)" src="resources/Photos/odtah3.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(13)" src="resources/Photos/odtah4.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(14)" src="resources/Photos/odtah5.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(15)" src="resources/Photos/odtah6.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(16)" src="resources/Photos/odtah7.jpg"/>
-    </div>
-  </div>
-
-  <div class="gallery-category">
-    <h3>Tepování</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(17)" src="resources/Photos/tepovani1.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(18)" src="resources/Photos/tepovani2.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(19)" src="resources/Photos/tepovani3.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(20)" src="resources/Photos/tepovani4.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(21)" src="resources/Photos/tepovani5.jpg"/>
-      <img alt="Galerie" onclick="openLightbox(22)" src="resources/Photos/tepovani6.jpg"/>
-    </div>
-  </div>
-
-  <div class="gallery-category">
-    <h3>Dezinfekce ozonem</h3>
-    <div class="photo-gallery">
-      <img alt="Galerie" onclick="openLightbox(23)" src="resources/Photos/dezinfekce1.jpg"/>
-    </div>
-  </div>
-
-  <div class="back-button">
-    <button onclick="showDefault()">Zpět na hlavní stránku</button>
-  </div>
+<div class="gallery-category">
+<h3>Instalatérské služby</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(0)" src="resources/Photos/instalaterskeSluzby1.jpg">
+<img alt="Galerie" onclick="openLightbox(1)" src="resources/Photos/instalaterskeSluzby2.jpg">
+<img alt="Galerie" onclick="openLightbox(2)" src="resources/Photos/instalaterskeSluzby3.jpg">
+<img alt="Galerie" onclick="openLightbox(3)" src="resources/Photos/instalaterskeSluzby4.jpg">
+</img></img></img></img></div>
+</div>
+<div class="gallery-category">
+<h3>Topenářské služby</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(4)" src="resources/Photos/topeni1.jpg">
+<img alt="Galerie" onclick="openLightbox(5)" src="resources/Photos/topeni2.jpg">
+<img alt="Galerie" onclick="openLightbox(6)" src="resources/Photos/topeni3.jpg">
+</img></img></img></div>
+</div>
+<div class="gallery-category">
+<h3>Stěhování těžkých předmětů</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(7)" src="resources/Photos/stehovani1.jpg">
+<img alt="Galerie" onclick="openLightbox(8)" src="resources/Photos/stehovani2.jpg">
+<img alt="Galerie" onclick="openLightbox(9)" src="resources/Photos/stehovani3.jpg">
+</img></img></img></div>
+</div>
+<div class="gallery-category">
+<h3>Odtahové služby</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(10)" src="resources/Photos/odtah1.jpg">
+<img alt="Galerie" onclick="openLightbox(11)" src="resources/Photos/odtah2.jpg">
+<img alt="Galerie" onclick="openLightbox(12)" src="resources/Photos/odtah3.jpg">
+<img alt="Galerie" onclick="openLightbox(13)" src="resources/Photos/odtah4.jpg">
+<img alt="Galerie" onclick="openLightbox(14)" src="resources/Photos/odtah5.jpg">
+<img alt="Galerie" onclick="openLightbox(15)" src="resources/Photos/odtah6.jpg">
+<img alt="Galerie" onclick="openLightbox(16)" src="resources/Photos/odtah7.jpg">
+</img></img></img></img></img></img></img></div>
+</div>
+<div class="gallery-category">
+<h3>Tepování</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(17)" src="resources/Photos/tepovani1.jpg">
+<img alt="Galerie" onclick="openLightbox(18)" src="resources/Photos/tepovani2.jpg">
+<img alt="Galerie" onclick="openLightbox(19)" src="resources/Photos/tepovani3.jpg">
+<img alt="Galerie" onclick="openLightbox(20)" src="resources/Photos/tepovani4.jpg">
+<img alt="Galerie" onclick="openLightbox(21)" src="resources/Photos/tepovani5.jpg">
+<img alt="Galerie" onclick="openLightbox(22)" src="resources/Photos/tepovani6.jpg">
+</img></img></img></img></img></img></div>
+</div>
+<div class="gallery-category">
+<h3>Dezinfekce ozonem</h3>
+<div class="photo-gallery">
+<img alt="Galerie" onclick="openLightbox(23)" src="resources/Photos/dezinfekce1.jpg">
+</img></div>
+</div>
+<div class="back-button">
+<button onclick="showDefault()">Zpět na hlavní stránku</button>
+</div>
 </section>
 <section class="hidden-section hidden" id="kontakty">
-<h2>Kontakty</h2>
+
 <div class="kontakt-flex">
 <!-- Ľavý box -->
 <div class="kontakt-card">
 <ul>
 <li>
-<img alt="Jaroslav Novák" class="profil-foto" src="resources/ProfilePictures/foto1.jpg"/>
+<img alt="Jaroslav Novák" class="profil-foto" src="resources/ProfilePictures/foto1.jpg">
 <div>
-<strong>Jaroslav Novák</strong><br/>
+<strong>Jaroslav Novák</strong><br>
                 +420 725 102 447
-              </div>
-</li>
+              </br></div>
+</img></li>
 <li>
-<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto2.jpg"/>
+<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto2.jpg">
 <div>
-<strong>Jaroslava Nováková</strong><br/>
+<strong>Jaroslava Nováková</strong><br>
                 +420 721 619 671
-              </div>
-</li>
+              </br></div>
+</img></li>
 <li>
-<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto3.jpg"/>
+<img alt="Jaroslava Nováková" class="profil-foto" src="resources/ProfilePictures/foto3.jpg">
 <div>
-<strong>Jaroslava Nováková</strong><br/>
+<strong>Jaroslava Nováková</strong><br>
                 +420 724 232 423
-              </div>
-</li>
+              </br></div>
+</img></li>
 <li>
 <div>
 <strong>E-mail:</strong><br/>
@@ -462,16 +441,16 @@
 </li>
 </ul>
 <div class="qr-codes">
-<img alt="QR Instagram" src="qr/qr-code_instagram.png"/>
-<img alt="QR TikTok" src="qr/qr-code-tiktok.png"/>
-<img alt="QR Facebook" src="qr/qr-code-facebook.png"/>
-</div>
+<img alt="QR Instagram" src="qr/qr-code_instagram.png">
+<img alt="QR TikTok" src="qr/qr-code-tiktok.png">
+<img alt="QR Facebook" src="qr/qr-code-facebook.png">
+</img></img></img></div>
 </div>
 <!-- Pravý box -->
 <div class="kontakt-right">
 <p><strong>Adresa provozovny:</strong><br/>Ždírec 156<br/>588 13 Polná</p>
 <div class="map-container">
-<iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.1096954305035!2d15.669006877150373!3d49.45339477141896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d0fe791dbb5c1%3A0x98d6339c577727c9!2zxb1kw61yZWMgMTU2LCA1ODggMTMgxb1kw61yZWM!5e1!3m2!1scs!2scz!4v1749153531578!5m2!1scs!2sc" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+<iframe allowfullscreen="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.1096954305035!2d15.669006877150373!3d49.45339477141896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d0fe791dbb5c1%3A0x98d6339c577727c9!2zxb1kw61yZWMgMTU2LCA1ODggMTMgxb1kw61yZWM!5e1!3m2!1scs!2scz!4v1749153531578!5m2!1scs!2sc" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 </div>
 </div>
@@ -485,7 +464,7 @@
 <p>Firma byla založena v roce 1992 podnikáním fyzické osoby. Společnost Bestfive s.r.o. jako pokračující firma byla založena v roce 2011.</p>
 <p>Zpočátku se firma zabývala především instalatérskými a drobnými stavebními pracemi. Později se vyprofilovala na stavebnictví, zemní a výkopové práce a autodopravu, tyto služby poskytuje dodnes.</p>
 <p>Zkušení zaměstnanci firmy dokáží realizovat jak menší stavební úpravy, opravy a rekonstrukce, tak domy na klíč, bourací práce, terénní úpravy, výkopové práce atd. Firma se také podílela na několika opravách historických objektů, např. Státního zámku Stekník, Státního hradu a zámku Bečov nad Teplou, Státního zámku Velké Březno a Státního zámku Kynžvart.</p>
-<p>Pokud se týká služeb v autodopravení, firma vlastní několik nákladních vozů, velký odtahový speciál a autojeřáb. Je tedy možno realizovať odvozy materiálů, převзы kontejnerů, větších strojů, atd.</p>
+<p>Pokud se týká služeb v autodopravení, firma vlastní několik nákladních vozů, velký odtahový speciál a autojeřáb. Je tedy možno realizovať odvozy materiálů, převoz kontejnerů, větších strojů, atd.</p>
 <div class="back-button" style="margin-top: 30px;">
 <button onclick="showDefault()" style="padding: 10px 20px; font-size: 16px;">Zpět na hlavní stránku</button>
 </div>
@@ -494,9 +473,9 @@
 <div class="lightbox-overlay" id="lightbox">
 <span class="close-btn" onclick="closeLightbox()">×</span>
 <span class="nav-btn prev-btn" onclick="prevLightbox()">❮</span>
-<img alt="" id="lightbox-img" src=""/>
+<img alt="" id="lightbox-img" src="">
 <span class="nav-btn next-btn" onclick="nextLightbox()">❯</span>
-</div>
+</img></div>
 </main>
 <script src="main.js"></script>
 <script>

@@ -122,6 +122,16 @@ function showSection(sectionId) {
     document.body.classList.remove("home-view");
   });
 
+  
+  // Zvýraznenie aktívneho odkazu v navigácii
+  document.querySelectorAll('header nav a, .hero-top-nav a').forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('onclick');
+    if (href && href.includes("'" + sectionId + "'")) {
+      link.classList.add('active');
+    }
+  });
+
   const section = document.getElementById(sectionId);
   if (section) {
     section.classList.remove("hidden");
@@ -139,7 +149,12 @@ function showSection(sectionId) {
   }
 }
 
+
 function showDefault() {
+  document.querySelectorAll('header nav a, .hero-top-nav a').forEach(link => {
+    link.classList.remove('active');
+  });
+
   document.querySelectorAll("#page-sections .hidden-section").forEach(sec => {
     sec.classList.add("hidden");
     sec.style.display = "none";
@@ -167,6 +182,7 @@ function showDefault() {
   }
   currentSection = "default";
 }
+
 
 
 // Skratene: Cookie lišta + Analytics + podmienené načítanie Google Máp

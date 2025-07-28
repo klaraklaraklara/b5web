@@ -1267,3 +1267,11 @@ img, video {
 .cookie-buttons button:hover {
   background: #a30000;
 }
+
+
+/* Zvýraznenie aktívnej sekcie v navigácii */
+header nav a.active,
+.hero-top-nav a.active {
+  text-decoration: underline;
+  color: #cc0000;
+}
