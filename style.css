@@ -1186,3 +1186,84 @@ img, video {
     min-height: 320px;
   }
 }
+
+/* Cookie lišta */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  display: none;
+  padding: 16px 20px;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cookie-buttons button {
+  background: orange;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+.cookie-buttons button:hover {
+  background: #e69500;
+}
+
+
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: none;
+  padding: 20px;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.cookie-banner-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cookie-buttons button {
+  background: #cc0000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.cookie-buttons button:hover {
+  background: #a30000;
+}

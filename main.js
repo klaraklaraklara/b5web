@@ -167,3 +167,56 @@ function showDefault() {
   }
   currentSection = "default";
 }
+
+
+// Skratene: Cookie lišta + Analytics + podmienené načítanie Google Máp
+
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.createElement("div");
+  banner.id = "cookie-banner";
+  banner.innerHTML = `
+    <div class="cookie-banner-inner">
+      <span>Tato stránka používá soubory cookies pro analýzu návštěvnosti a zobrazení map.</span>
+      <div class="cookie-buttons">
+        <button id="cookie-accept">Přijmout</button>
+        <button id="cookie-decline">Odmítnout</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+
+  const consent = localStorage.getItem("cookieConsent");
+  if (!consent) {
+    banner.style.display = "flex";
+  } else {
+    if (consent === "accepted") enableAnalyticsAndMap();
+  }
+
+  document.getElementById("cookie-accept").onclick = () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    banner.style.display = "none";
+    enableAnalyticsAndMap();
+  };
+
+  document.getElementById("cookie-decline").onclick = () => {
+    localStorage.setItem("cookieConsent", "declined");
+    banner.style.display = "none";
+  };
+
+  function enableAnalyticsAndMap() {
+    const gaScript = document.createElement("script");
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9M5TE8G686";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-9M5TE8G686');
+
+    // mapa v sekcii kontakty
+    const iframe = document.querySelector("#kontakty iframe[data-src]");
+    if (iframe) iframe.src = iframe.dataset.src;
+  }
+});
